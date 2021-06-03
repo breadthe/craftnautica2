@@ -24,7 +24,7 @@
 
 <header>
 	<nav id="nav" class="bg-black">
-		<div class="flex items-center justify-between max-w-2xl mx-4 sm:mx-8 lg:mx-auto">
+		<div class="flex items-center justify-between max-w-6xl mx-4 sm:mx-8 lg:mx-auto">
 			<!-- Left side -->
 			<div class="flex-1 flex items-center -ml-3 sm:-ml-0">
 				<a

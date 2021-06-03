@@ -1,4 +1,4 @@
-<main class="container mx-auto p-4">
+<main class="container max-w-6xl mx-auto p-4">
 	<section class="text-xl mx-auto mt-4 leading-normal">
 		<h1 class="logo text-5xl text-center">
 			<span class="sub">Craft</span><span class="nautica">nautica</span>
