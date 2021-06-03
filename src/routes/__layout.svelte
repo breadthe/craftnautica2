@@ -1,22 +1,14 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import '../app.scss'; // app.postcss
 </script>
 
-<nav>
-	<a href=".">Home</a>
-	<a href="about">About</a>
-	<a href="settings">Settings</a>
-</nav>
+<Header />
 
 <slot />
 
-<style lang="scss">
-    a {
-        color: blue;
-        text-decoration: underline;
+<Footer />
 
-        &:visited {
-            color: purple;
-        }
-    }
+<style lang="scss">
 </style>
