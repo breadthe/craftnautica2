@@ -1,7 +1,8 @@
 <script>
+	import { getStores, navigating, page, session } from '$app/stores';
 	import Icon from '$lib/components/Icon.svelte';
 
-    const domain = 'sn';
+	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
 
 	/* export default {
       name: 'NavMain',
@@ -46,14 +47,20 @@
 
 				<a
 					href="/sn"
-					class="border-b-4 border-black pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain === 'sn' ? 'font-bold text-blue-100 border-blue-600' : 'hover:border-gray-400'}"
+					class="border-b-4 border-black pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain ===
+					'sn'
+						? 'font-bold text-blue-100 border-blue-600'
+						: 'hover:border-gray-400'}"
 				>
 					Subnautica
 				</a>
 
 				<a
 					href="/bz"
-					class="border-b-4 border-black pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain === 'bz' ? 'font-bold text-blue-100 border-blue-600' : 'hover:border-gray-400'}"
+					class="border-b-4 border-black pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain ===
+					'bz'
+						? 'font-bold text-blue-100 border-blue-600'
+						: 'hover:border-gray-400'}"
 				>
 					Below Zero
 				</a>
@@ -98,10 +105,9 @@
 			</router-link> -->
 
 				<!-- Settings -->
-				<!-- <router-link to="/settings" class="flex items-center ml-4 sm:ml-8">
-				<v-icon icon="settings" color="blue-dark" title="Settings" />
-			</router-link> -->
-				<Icon icon="settings" color="blue-600" title="Settings" />
+				<a href="/settings" class="flex items-center ml-4 sm:ml-8">
+                    <Icon icon="settings" color="blue-600" title="Settings" />
+				</a>
 			</div>
 		</div>
 	</nav>
