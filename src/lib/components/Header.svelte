@@ -3,6 +3,9 @@
 	import Icon from '$lib/components/Icon.svelte';
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
+	$: showCart = ['sn', 'bz'].indexOf(domain) > -1;
+	const inventoriesCount = 1; // TODO make it computed
+	const cartCount = 10; // TODO make it computed
 
 	/* export default {
       name: 'NavMain',
@@ -68,45 +71,45 @@
 
 			<!-- Right side -->
 			<div class="flex items-center -mr-2 sm:-mr-0">
-				<!-- Inventories -->
-				<!-- <router-link
-				v-if="showCart"
-				:to="`/${domain}/inventories`"
-				class="flex items-center ml-4 sm:ml-8"
-			>
-				<v-icon
-					icon="box"
-					:color="inventoriesCount ? 'blue-dark' : 'blue-darkest'"
-					title="Inventories"
-				/>
-				<span
-					v-if="inventoriesCount"
-					class="ml-2 w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center rounded-full border-2 border-blue bg-blue text-black text-sm"
-					:title="`${inventoriesCount} inventories`"
-				>
-					{{ inventoriesCount }}
-				</span>
-			</router-link> -->
+				{#if showCart}
+					<!-- Inventories -->
+					<a href={`/${domain}/inventories`} class="flex items-center ml-4 sm:ml-8">
+						<Icon
+							icon="box"
+							color={inventoriesCount ? 'text-blue-600' : 'text-blue-800'}
+							title="Inventories"
+						/>
+						{#if inventoriesCount}
+							<span
+								class="ml-2 w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center rounded-full border-2 border-blue-600 bg-blue-600 text-black text-sm"
+								title={`${inventoriesCount} inventories`}
+							>
+								{inventoriesCount}
+							</span>
+						{/if}
+					</a>
 
-				<!-- Cart -->
-				<!-- <router-link v-if="showCart" :to="`/${domain}/cart`" class="flex items-center ml-4 sm:ml-8">
-				<v-icon
-					icon="shopping-cart"
-					:color="cartCount ? 'blue-dark' : 'blue-darkest'"
-					title="Shopping cart"
-				/>
-				<span
-					v-if="cartCount"
-					class="ml-2 w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center rounded-full border-2 border-blue bg-blue text-black text-sm"
-					:title="`${cartCount} items in cart`"
-				>
-					{{ cartCount }}
-				</span>
-			</router-link> -->
+					<!-- Cart -->
+					<a href={`/${domain}/cart`} class="flex items-center ml-4 sm:ml-8">
+						<Icon
+							icon="shopping-cart"
+							color={cartCount ? 'text-blue-600' : 'text-blue-800'}
+							title="InveShopping cartntories"
+						/>
+						{#if cartCount}
+							<span
+								class="ml-2 w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center rounded-full border-2 border-blue-600 bg-blue-600 text-black text-sm"
+								title={`${cartCount} items in cart`}
+							>
+								{cartCount}
+							</span>
+						{/if}
+					</a>
+				{/if}
 
 				<!-- Settings -->
 				<a href="/settings" class="flex items-center ml-4 sm:ml-8">
-                    <Icon icon="settings" color="blue-600" title="Settings" />
+					<Icon icon="settings" color="text-blue-600" title="Settings" />
 				</a>
 			</div>
 		</div>
