@@ -33,8 +33,8 @@
 			</a>
 		</div>
 		<div class="flex flex-col">
-			<router-link to="/contact" class="mb-4 sm:mb-2">Contact</router-link>
-			<router-link to="/privacy" class="mb-4 sm:mb-2">Privacy Policy</router-link>
+			<a href="/contact" class="mb-4 sm:mb-2" title="Contact">Contact</a>
+			<a href="/privacy" class="mb-4 sm:mb-2" title="Privacy policy">Privacy Policy</a>
 		</div>
 	</div>
 
