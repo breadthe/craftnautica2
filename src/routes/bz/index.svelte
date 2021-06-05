@@ -1,7 +1,10 @@
 <script>
-	import { itemsBzStore } from '../../store';
+	import { itemsStore } from '../../store';
+	import Recipes from '$lib/components/Recipes.svelte';
 
-	console.log($itemsBzStore);
+	console.log($itemsStore);
 </script>
 
-<section>Below Zero</section>
+<section>
+    <Recipes />
+</section>

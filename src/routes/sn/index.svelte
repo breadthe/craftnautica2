@@ -1,9 +1,10 @@
 <script>
-    import { itemsSnStore } from '../../store';
+	import { itemsStore } from '../../store';
+	import Recipes from '$lib/components/Recipes.svelte';
 
-    console.log($itemsSnStore);
+	console.log($itemsStore);
 </script>
 
 <section>
-    Subnautica
+	<Recipes />
 </section>

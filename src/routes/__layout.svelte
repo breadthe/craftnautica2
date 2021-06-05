@@ -2,14 +2,9 @@
     // Is called once on initial page load
     export async function load({ page, fetch, session, context }) {
         const domain = page.path.split('/')[1]; // ['/', 'sn']
-
         // Load the items into the store, based on domain
-        if (domain === 'sn') {
-            itemsSnStore.init();
-        }
-
-        if (domain === 'bz') {
-            itemsBzStore.init();
+        if (domain === 'sn' || domain === 'bz') {
+            itemsStore.init(domain);
         }
 
         return {};
@@ -17,7 +12,7 @@
 </script>
 
 <script>
-    import { itemsSnStore, itemsBzStore } from '../store';
+    import { itemsStore } from '../store';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.scss'; // app.postcss
