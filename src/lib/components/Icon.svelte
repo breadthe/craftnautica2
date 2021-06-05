@@ -7,18 +7,21 @@
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 	import X from '$lib/components/icons/X.svelte';
 
-    export let icon, color, title = '';
-    export let size = 24;
+	export let icon;
+	export let color;
+	export let title = '';
+	export let size = 24;
+	export let klass = ''; // Merge default classes with prop classes; aka "class" but it's an invalid keyword so wth
 
 	const icons = [
-        { id: 'box', component: Box },
-        { id: 'github', component: Github },
-        { id: 'search', component: Search },
-        { id: 'settings', component: Settings },
-        { id: 'shopping-cart', component: ShoppingCart },
-        { id: 'twitter', component: Twitter },
-        { id: 'x', component: X },
-    ];
+		{ id: 'box', component: Box },
+		{ id: 'github', component: Github },
+		{ id: 'search', component: Search },
+		{ id: 'settings', component: Settings },
+		{ id: 'shopping-cart', component: ShoppingCart },
+		{ id: 'twitter', component: Twitter },
+		{ id: 'x', component: X }
+	];
 </script>
 
 <svg
@@ -29,10 +32,10 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-    width={size}
-    height={size}
-    {title}
-	class="feather icon {color} {`w-${size}`} {`h-${size}`}"
+	width={size}
+	height={size}
+	{title}
+	class={`feather icon ${color} w-${size} h-${size} ${klass}`}
 >
-	<svelte:component this={icons.find(i => i.id === icon).component} />
+	<svelte:component this={icons.find((i) => i.id === icon).component} />
 </svg>
