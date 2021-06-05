@@ -2,36 +2,6 @@ import { writable } from "svelte/store";
 import itemsSn from "$lib/items-sn";
 import itemsBz from "$lib/items-bz";
 
-// Subnautica items
-let defaultSnItems = [];
-function initItemsSnStore() {
-    const { subscribe, set } = writable(defaultSnItems);
-
-    return {
-        subscribe,
-        set,
-        init: () => {
-            set(itemsSn);
-        }
-    };
-}
-export const itemsSnStore = initItemsSnStore();
-
-// Below Zero items
-let defaultBzItems = [];
-function initItemsBzStore() {
-    const { subscribe, set } = writable(defaultBzItems);
-
-    return {
-        subscribe,
-        set,
-        init: () => {
-            set(itemsBz);
-        }
-    };
-}
-export const itemsBzStore = initItemsBzStore();
-
 // Items store
 let defaultItems = [];
 function initItemsStore() {
