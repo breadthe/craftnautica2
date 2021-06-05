@@ -7,5 +7,5 @@
 
 <h1 class="logo flex items-center">
 	<slot />
-	<span class="sub">{prefix}</span><span class="nautica">{suffix}</span>
+	<span class="sub tracking-wider">{prefix}</span><span class="nautica tracking-wider">{suffix}</span>
 </h1>
