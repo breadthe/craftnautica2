@@ -5,7 +5,7 @@
 	import ShoppingCart from '$lib/components/icons/ShoppingCart.svelte';
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 
-    export let icon, color, title;
+    export let icon, color, title = '';
     export let size = 24;
 
 	const icons = [
