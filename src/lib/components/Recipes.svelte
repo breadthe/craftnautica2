@@ -9,12 +9,8 @@
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
 	$: fullDomainName = util.fullDomainName(domain);
 
-    const items = $itemsStore;
+	const items = $itemsStore;
 	const types = util.types(items);
-
-	function filterByType(type) {
-		return util.filterByType(items, type);
-	}
 
 	function formatType(type) {
 		return util.formatType(type);
@@ -22,15 +18,15 @@
 </script>
 
 <section class="">
-	<div
+	<header
 		class="flex flex-col sm:flex-row items-center sm:items-baseline justify-center sm:justify-between mx-4"
 	>
 		<SubNautica {fullDomainName} />
 
 		<Search {fullDomainName} />
-	</div>
+	</header>
 
 	{#each types as type (type)}
-		<Type type={formatType(type)} types={filterByType(type)} />
+		<Type type={formatType(type)} types={util.filterByType(items, type)} />
 	{/each}
 </section>
