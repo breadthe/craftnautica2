@@ -1,5 +1,6 @@
 <script>
 	import Box from '$lib/components/icons/Box.svelte';
+	import FolderPlus from '$lib/components/icons/FolderPlus.svelte';
 	import Github from '$lib/components/icons/Github.svelte';
 	import Search from '$lib/components/icons/Search.svelte';
 	import Settings from '$lib/components/icons/Settings.svelte';
@@ -15,6 +16,7 @@
 
 	const icons = [
 		{ id: 'box', component: Box },
+		{ id: 'folder-plus', component: FolderPlus },
 		{ id: 'github', component: Github },
 		{ id: 'search', component: Search },
 		{ id: 'settings', component: Settings },
