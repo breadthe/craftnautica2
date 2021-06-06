@@ -94,7 +94,7 @@
 						<Icon
 							icon="shopping-cart"
 							color={cartCount ? 'text-blue-600' : 'text-blue-800'}
-							title="InveShopping cartntories"
+							title="Shopping cart"
 						/>
 						{#if cartCount}
 							<span
