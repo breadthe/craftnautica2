@@ -1,7 +1,3 @@
-import fromEntries from 'object.fromentries';
-
-// TODO: test coverage
-
 const defaultInventories = ['Lifepod', 'Seamoth', 'Cyclops', 'Prawn'];
 
 const id = item => Object.keys(item)[0]; // {'Copper_Ore': 2} -> Copper_Ore
@@ -15,8 +11,8 @@ const types = items => Object.values(items)
     .map(v => v.t)
     .filter((val, key, self) => self.indexOf(val) === key);
 
-const filterByType = (items, type) => fromEntries(Object.entries(items)
-    .filter(i => i[1].t === type));
+const filterByType = (items, type) => Object.entries(items)
+    .filter(i => i[1].t === type);
 
 const formatType = type => type.split('.').join(' > ').split('_').join(' ');
 
@@ -48,8 +44,8 @@ const usedIn = (item, items) => {
     return arr;
 };
 
-const search = (items, srcStr) => fromEntries(Object.entries(items)
-    .filter(i => formatType(i[0]).match(new RegExp(srcStr, 'ig')) || formatType(i[1].t).match(new RegExp(srcStr, 'ig'))));
+const search = (items, srcStr) => items
+    .filter(i => formatType(i[0]).match(new RegExp(srcStr, 'ig')) || formatType(i[1].t).match(new RegExp(srcStr, 'ig')));
 
 const fullDomainName = (domain) => {
     switch (domain) {

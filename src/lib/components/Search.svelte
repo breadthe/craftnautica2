@@ -46,6 +46,7 @@
 		type="text"
 		bind:this={searchBar}
 		bind:value={$search}
+        on:input={(e) => search.set(e.target.value)}
 		{placeholder}
 		class="flex-1 w-full sm:w-4/5 max-w-lg mt-4 sm:mt-0 ml-0 sm:ml-4 p-4 px-12 border-blue-900 bg-blue-900 text-gray-100"
 		use:registerSearchShortcutAction

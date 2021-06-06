@@ -18,6 +18,9 @@ function initItemsStore() {
 }
 export const itemsStore = initItemsStore();
 
+// Search string
+export const search = writable('');
+
 
 // Page (Main, Preferences)
 // export const page = writable('Main');
