@@ -5,8 +5,14 @@
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
 	$: showCart = ['sn', 'bz'].indexOf(domain) > -1;
-    $: cartCount = $cart[domain].length;
-	const inventoriesCount = 1; // TODO make it computed
+
+    let cartCount;
+    $: {
+        const tmpcart = $cart[domain];
+        cartCount = tmpcart ? tmpcart.length : 0;
+    }
+
+    let inventoriesCount = 1; // TODO make it computed
 
 	/* export default {
         inventoriesCount: function () {
