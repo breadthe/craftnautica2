@@ -3,7 +3,6 @@
 	import util from '$lib/util';
 	import ItemIcon from '$lib/components/ItemIcon.svelte';
 	import ItemMenu from '$lib/components/ItemMenu.svelte';
-	import { loop_guard } from 'svelte/internal';
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
 
