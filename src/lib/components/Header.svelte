@@ -1,6 +1,6 @@
 <script>
 	import { getStores, navigating, page, session } from '$app/stores';
-	import { cart } from '../../store';
+	import { cart } from '$store';
 	import Icon from '$lib/components/Icon.svelte';
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']

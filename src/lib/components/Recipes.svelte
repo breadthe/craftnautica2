@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { itemsStore } from '../../store';
+	import { itemsStore } from '$store';
 	import util from '$lib/util';
 	import Search from '$lib/components/Search.svelte';
 	import SubNautica from '$lib/components/SubNautica.svelte';

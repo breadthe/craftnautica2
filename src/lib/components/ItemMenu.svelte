@@ -1,6 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import { cart } from '../../store';
+	import { cart } from '$store';
 	import util from '$lib/util';
 	// import AddToInventory from '@/components/AddToInventory.vue';
 	import ItemIcon from '$lib/components/ItemIcon.svelte';

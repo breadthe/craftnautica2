@@ -1,5 +1,5 @@
 <script>
-	import { search } from '../../store';
+	import { search } from '$store';
 	import Icon from '$lib/components/Icon.svelte';
 
 	export let fullDomainName;

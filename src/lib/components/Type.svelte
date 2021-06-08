@@ -1,5 +1,5 @@
 <script>
-	import { search } from '../../store';
+	import { search } from '$store';
 	import util from '$lib/util';
 	import Item from '$lib/components/Item.svelte';
 
