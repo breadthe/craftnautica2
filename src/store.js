@@ -1,6 +1,8 @@
 import { writable } from "svelte/store";
 import itemsSn from "$lib/items-sn";
 import itemsBz from "$lib/items-bz";
+import Cart from './cart';
+import _findIndex from 'lodash.findindex';
 
 // Items store
 let defaultItems = [];
@@ -21,112 +23,61 @@ export const itemsStore = initItemsStore();
 // Search string
 export const search = writable('');
 
+// Cart
+let defaultCart = [];
+function initCart() {
+    const { subscribe, set } = writable(defaultCart);
 
-// Page (Main, Preferences)
-// export const page = writable('Main');
+    return {
+        subscribe,
+        set,
+        init: () => {
+            const cart = new Cart();
 
-// Theme: dark, light, automatic
-// const storedTheme = settings.getSync('theme');
-// export const theme = writable(storedTheme);
-// theme.subscribe(value => {
-//     settings.setSync('theme', value);
-// });
+            const storedCart = cart.get();
+            if (Object.keys(storedCart).length) {
+                set(storedCart);
+            } else {
+                cart.reset();
+            }
+        },
+        addToCart(obj) {
+            const { domain, id, qty } = { ...obj };
+            const cart = new Cart();
+            const storedCart = cart.get();
 
-// Editor
-// const defaultEditor = 'PhpStorm';
-// const storedEditor = settings.getSync('editor');// || defaultEditor
-// export const editor = writable(storedEditor);
-// editor.subscribe(value => {
-//     settings.setSync('editor', value);
-// });
+            const domainCart = storedCart[domain] || []; // cart.sn | cart.bz
 
-// Port
-// const defaultPort = 59999;
-// const storedPort = settings.getSync('port') || defaultPort;
-// export const port = writable(storedPort);
-// port.subscribe(value => {
-//     settings.setSync('port', value);
-// });
+            const ix = _findIndex(domainCart, id);
 
-// Float on top
-// const storedFloating = settings.getSync('floating') || false;
-// export const floating = writable(storedFloating);
-// floating.subscribe(value => {
-//     settings.setSync('floating', value);
-// });
+            if (ix > -1) {
+                domainCart[ix][id] += qty; // items is in cart, increment qty
+            } else {
+                domainCart.push({ [id]: qty }); // item is not in cart, add it
+            }
 
-// Log items - each log item is an array of potentially multiple sub-items
-// ... though in practice it seems there's only 1 item (index 0)
-// let defaultLogItems = [];
-// function createLogItems() {
-//     const { subscribe, set } = writable(defaultLogItems);
+            storedCart[domain] = domainCart;
 
-//     return {
-//         subscribe,
-//         set,
-//         push: (item) => {
-//             const newLogItems = defaultLogItems;
-//             newLogItems.push(item);
-//             set(newLogItems);
-//         },
-//         removeItem: (itemId) => {
-//             const ix = defaultLogItems.findIndex(i => i.id === itemId);
-//             if (ix > -1) {
-//                 defaultLogItems.splice(ix, 1);
-//                 set(defaultLogItems);
-//             }
-//         },
-//         clear: (filter) => {
-//             const excluded = [];
+            set(storedCart);
 
-//             // Remove only filtered items
-//             if (filter.length) {
-//                 defaultLogItems.forEach(i => { if (!filter.includes(i.style.color)) excluded.push(i) })
-//             }
-
-//             defaultLogItems = excluded;
-//             set(defaultLogItems);
-//         }
-//     };
-// }
-// export const logItems = createLogItems();
-
-// Filter (colors)
-// let defaultFilter = [];
-// function createFilter() {
-//     const { subscribe, set } = writable(defaultFilter);
-
-//     return {
-//         subscribe,
-//         set,
-//         // TODO using push() & remove() as part of toggle is cleaner but couldn't get it to work
-//         toggle: (color) => {
-//             const ix = defaultFilter.indexOf(color);
-//             if (ix > -1) {
-//                 defaultFilter.splice(ix, 1);
-//                 set(defaultFilter);
-//             } else {
-//                 const newFilter = defaultFilter;
-//                 newFilter.push(color);
-//                 set(newFilter);
-//             }
-//         },
-//         push: (color) => {
-//             const newFilter = defaultFilter;
-//             newFilter.push(color);
-//             set(newFilter);
-//         },
-//         remove: (color) => {
-//             const ix = defaultFilter.indexOf(color);
-//             if (ix > -1) {
-//                 defaultFilter.splice(ix, 1);
-//                 set(defaultFilter);
-//             }
-//         },
-//         clear: () => {
-//             defaultFilter = [];
-//             set(defaultFilter);
-//         }
-//     };
-// }
-// export const filter = createFilter();
+            cart.set(storedCart);
+        },
+        deleteItem(obj) {
+            const { domain, id } = { ...obj };
+            //
+        },
+        incrementQty(obj) {
+            const { domain, id } = { ...obj };
+            //
+        },
+        decrementQty(obj) {
+            const { domain, id } = { ...obj };
+            //
+        },
+        emptyCart(obj) {
+            const { domain } = { ...obj };
+            //
+        },
+    };
+}
+export const cart = initCart();
