@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "lodash.findindex": "^4.6.0",
     "object.fromentries": "^2.0.4"
   }
 }
