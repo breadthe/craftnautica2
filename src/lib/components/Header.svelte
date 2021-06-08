@@ -1,28 +1,17 @@
 <script>
 	import { getStores, navigating, page, session } from '$app/stores';
+	import { cart } from '../../store';
 	import Icon from '$lib/components/Icon.svelte';
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
 	$: showCart = ['sn', 'bz'].indexOf(domain) > -1;
+    $: cartCount = $cart[domain].length;
 	const inventoriesCount = 1; // TODO make it computed
-	const cartCount = 10; // TODO make it computed
 
 	/* export default {
-      name: 'NavMain',
-      components: {
-        VIcon,
-      },
-      computed: {
-        domain: vm => vm.$route.path.split(/\//)[1],
-        showCart: vm => ['sn', 'bz'].indexOf(vm.domain) > -1,
-        cartCount: function () {
-          const cart = this.$store.state.Cart.cart[this.domain];
-          return cart ? cart.length : 0;
-        },
         inventoriesCount: function () {
           return this.$store.getters.inventoriesCount(this.domain);
         },
-      },
     }; */
 </script>
 
