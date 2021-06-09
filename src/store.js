@@ -104,7 +104,25 @@ function initCart() {
         },
         decrementQty(obj) {
             const { domain, id } = { ...obj };
-            //
+
+            const cart = new Cart();
+            const storedCart = cart.get();
+
+            const domainCart = storedCart[domain] || []; // cart.sn | cart.bz
+
+            const ix = _findIndex(domainCart, id);
+
+            if (ix > -1) {
+                if (domainCart[ix][id] > 1) {
+                    domainCart[ix][id]--; // items is in cart, decrement qty, make sure it doesn't go to 0
+                }
+            }
+
+            storedCart[domain] = domainCart;
+
+            set(storedCart);
+
+            cart.set(storedCart);
         },
         emptyCart(obj) {
             const { domain } = { ...obj };
