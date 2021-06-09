@@ -24,32 +24,6 @@
 	function decrementQty(id) {
 		cart.decrementQty({ domain: domain, id: id });
 	}
-
-	/* export default {
-      computed: {
-        showingRecipe: {
-          get: function () { return this.showRecipe; },
-          set: function (data) { this.showRecipe = data; },
-        },
-      },
-      watch: {
-        dataShowRecipe: function () {
-          this.showingRecipe = this.dataShowRecipe;
-        },
-      },
-      methods: {
-        // TODO: refactor the following cart methods into 1 with an additional action param
-        deleteItem: function (id) {
-          this.$store.dispatch('deleteItem', { domain: this.domain, id: id });
-        },
-        incrementQty: function (id) {
-          this.$store.dispatch('incrementQty', { domain: this.domain, id: id });
-        },
-        decrementQty: function (id) {
-          this.$store.dispatch('decrementQty', { domain: this.domain, id: id });
-        },
-      },
-    }; */
 </script>
 
 <section class="flex flex-col hover:bg-blue-900 -mx-4 px-4">
@@ -74,7 +48,6 @@
 						<Icon
 							icon={showRecipe ? 'chevron-up' : 'chevron-down'}
 							color="text-gray-400"
-							title="Show recipe"
 						/>
 					</button>
 				{/if}
@@ -83,19 +56,21 @@
 
 		<div class="flex items-center justify-end w-1/4">
 			{#if qty(item) > 1}
-				<button on:click={decrementQty(util.id(item))} class="flex mr-4">
-					<Icon icon="minus-circle" color="text-blue-600" title="Decrement quantity" />
+				<button on:click={decrementQty(util.id(item))} class="flex mr-4" title="Decrement quantity">
+					<Icon icon="minus-circle" color="text-blue-600" />
 				</button>
 			{/if}
+
 			{qty(item)}
-			<button on:click={incrementQty(util.id(item))} class="flex ml-4">
-				<Icon icon="plus-circle" color="text-blue-600" title="Incrment quantity" />
+
+			<button on:click={incrementQty(util.id(item))} class="flex ml-4" title="Incrment quantity">
+				<Icon icon="plus-circle" color="text-blue-600" />
 			</button>
 		</div>
 
 		<div class="flex items-center">
-			<button on:click={deleteItem(util.id(item))} class="flex ml-4">
-				<Icon icon="x-circle" color="text-blue-600" title="Delete item" />
+			<button on:click={deleteItem(util.id(item))} class="flex ml-4" title="Delete item">
+				<Icon icon="x-circle" color="text-blue-600" />
 			</button>
 		</div>
 	</div>
