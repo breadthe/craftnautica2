@@ -21,8 +21,9 @@
 		@apply p-6;
 		@apply rounded-full;
 		@apply bg-gray-900;
-		background-position: center;
-		background-repeat: no-repeat;
+        @apply bg-contain;
+        @apply bg-center;
+        @apply bg-no-repeat;
 
 		&--sm {
 			@extend .item-icon;
