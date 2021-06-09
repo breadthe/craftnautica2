@@ -125,8 +125,16 @@ function initCart() {
             cart.set(storedCart);
         },
         emptyCart(obj) {
-            const { domain } = { ...obj };
-            //
+            const { domain } = obj;
+
+            const cart = new Cart();
+            const storedCart = cart.get();
+
+            storedCart[domain] = [];
+
+            set(storedCart);
+
+            cart.set(storedCart);
         },
     };
 }

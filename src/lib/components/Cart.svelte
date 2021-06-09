@@ -4,7 +4,7 @@
 	import util from '$lib/util';
 	import Algo from '$lib/algo';
 	import CartItem from '$lib/components/CartItem.svelte';
-	// import EmptyCartOrInventory from '@/components/EmptyCartOrInventory.vue';
+	import EmptyCartOrInventory from '$lib/components/EmptyCartOrInventory.svelte';
 	// import ComponentsList from '@/components/ComponentsList.vue';
 	import SubNautica from '$lib/components/SubNautica.svelte';
 	import Icon from '$lib/components/Icon.svelte';
@@ -74,7 +74,7 @@
 
 	<!-- ============= Cart Items ============= -->
 	{#if cartItems.length}
-		<div class="mx-4" v-if="cart.length">
+		<div class="mx-4">
 			{#each cartItems as item, index (index)}
 				<div class="">
 					<CartItem
@@ -84,13 +84,13 @@
 						recipe={util.recipe(util.id(item), items)}
 					/>
 				</div>
-
-				<!-- ============= Empty Cart ============= -->
-				<!-- <empty-cart-or-inventory what="Cart" :domain="domain" /> -->
-
-				<!-- ============= Shopping List ============= -->
-				<!-- <components-list :domain="domain" title="Shopping List" :list="shoppingList" /> -->
 			{/each}
+
+			<!-- ============= Empty Cart ============= -->
+			<EmptyCartOrInventory what="Cart" {domain} />
+
+			<!-- ============= Shopping List ============= -->
+			<!-- <components-list :domain="domain" title="Shopping List" :list="shoppingList" /> -->
 		</div>
 	{:else}
 		<div class="flex flex-col text-center">Your cart is empty.</div>
