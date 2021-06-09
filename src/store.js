@@ -64,7 +64,23 @@ function initCart() {
         },
         deleteItem(obj) {
             const { domain, id } = { ...obj };
-            //
+
+            const cart = new Cart();
+            const storedCart = cart.get();
+
+            const domainCart = storedCart[domain] || []; // cart.sn | cart.bz
+
+            const ix = _findIndex(domainCart, id);
+
+            if (ix > -1) {
+                domainCart.splice(ix, 1);
+            }
+
+            storedCart[domain] = domainCart;
+
+            set(storedCart);
+
+            cart.set(storedCart);
         },
         incrementQty(obj) {
             const { domain, id } = { ...obj };
