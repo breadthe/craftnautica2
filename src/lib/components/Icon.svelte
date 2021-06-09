@@ -9,6 +9,7 @@
 	import Search from '$lib/components/icons/Search.svelte';
 	import Settings from '$lib/components/icons/Settings.svelte';
 	import ShoppingCart from '$lib/components/icons/ShoppingCart.svelte';
+	import Trash2 from '$lib/components/icons/Trash2.svelte';
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 	import X from '$lib/components/icons/X.svelte';
 	import XCircle from '$lib/components/icons/XCircle.svelte';
@@ -30,6 +31,7 @@
 		{ id: 'search', component: Search },
 		{ id: 'settings', component: Settings },
 		{ id: 'shopping-cart', component: ShoppingCart },
+		{ id: 'trash-2', component: Trash2 },
 		{ id: 'twitter', component: Twitter },
 		{ id: 'x', component: X },
 		{ id: 'x-circle', component: XCircle },
