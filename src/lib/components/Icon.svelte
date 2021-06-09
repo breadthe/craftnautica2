@@ -1,12 +1,17 @@
 <script>
 	import Box from '$lib/components/icons/Box.svelte';
+	import ChevronDown from '$lib/components/icons/ChevronDown.svelte';
+	import ChevronUp from '$lib/components/icons/ChevronUp.svelte';
 	import FolderPlus from '$lib/components/icons/FolderPlus.svelte';
 	import Github from '$lib/components/icons/Github.svelte';
+	import MinusCircle from '$lib/components/icons/MinusCircle.svelte';
+	import PlusCircle from '$lib/components/icons/PlusCircle.svelte';
 	import Search from '$lib/components/icons/Search.svelte';
 	import Settings from '$lib/components/icons/Settings.svelte';
 	import ShoppingCart from '$lib/components/icons/ShoppingCart.svelte';
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 	import X from '$lib/components/icons/X.svelte';
+	import XCircle from '$lib/components/icons/XCircle.svelte';
 
 	export let icon;
 	export let color;
@@ -16,13 +21,18 @@
 
 	const icons = [
 		{ id: 'box', component: Box },
+		{ id: 'chevron-down', component: ChevronDown },
+		{ id: 'chevron-up', component: ChevronUp },
 		{ id: 'folder-plus', component: FolderPlus },
 		{ id: 'github', component: Github },
+		{ id: 'minus-circle', component: MinusCircle },
+		{ id: 'plus-circle', component: PlusCircle },
 		{ id: 'search', component: Search },
 		{ id: 'settings', component: Settings },
 		{ id: 'shopping-cart', component: ShoppingCart },
 		{ id: 'twitter', component: Twitter },
-		{ id: 'x', component: X }
+		{ id: 'x', component: X },
+		{ id: 'x-circle', component: XCircle },
 	];
 </script>
 
