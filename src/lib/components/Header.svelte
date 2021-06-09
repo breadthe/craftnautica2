@@ -45,20 +45,20 @@
 
 				<a
 					href="/sn"
-					class="border-b-4 border-black pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain ===
+					class="border-b-4 pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain ===
 					'sn'
 						? 'font-bold text-blue-100 border-blue-600'
-						: 'hover:border-gray-400'}"
+						: 'border-black hover:border-gray-400'}"
 				>
 					Subnautica
 				</a>
 
 				<a
 					href="/bz"
-					class="border-b-4 border-black pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain ===
+					class="border-b-4 pb-2 mt-3 mr-4 text-gray-400 hover:text-white text-sm sm:text-base {domain ===
 					'bz'
 						? 'font-bold text-blue-100 border-blue-600'
-						: 'hover:border-gray-400'}"
+						: 'border-black hover:border-gray-400'}"
 				>
 					Below Zero
 				</a>
