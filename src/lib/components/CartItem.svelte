@@ -82,9 +82,11 @@
 		</div>
 
 		<div class="flex items-center justify-end w-1/4">
-			<button on:click={decrementQty(util.id(item))} class="flex mr-4">
-				<Icon icon="minus-circle" color="text-blue-600" title="Decrement quantity" />
-			</button>
+			{#if qty(item) > 1}
+				<button on:click={decrementQty(util.id(item))} class="flex mr-4">
+					<Icon icon="minus-circle" color="text-blue-600" title="Decrement quantity" />
+				</button>
+			{/if}
 			{qty(item)}
 			<button on:click={incrementQty(util.id(item))} class="flex ml-4">
 				<Icon icon="plus-circle" color="text-blue-600" title="Incrment quantity" />
