@@ -37,7 +37,7 @@
 	width={size}
 	height={size}
 	{title}
-	class={`feather icon ${color} w-${size} h-${size} ${klass}`}
+	class={`feather icon ${color} ${klass}`}
 >
 	<svelte:component this={icons.find((i) => i.id === icon).component} />
 </svg>
