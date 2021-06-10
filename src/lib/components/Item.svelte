@@ -50,7 +50,7 @@
 	</div>
 
 	{#if menu}
-		<ItemMenu {id} {domain} on:{closeItemMenu} />
+		<ItemMenu {id} {domain} on:closeItemMenu={closeItemMenu} />
 	{/if}
 </div>
 
