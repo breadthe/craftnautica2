@@ -12,7 +12,7 @@
 
 {#if render}
 	<section class="mx-4 xs:mx-0">
-		<h3 class="mt-8 mb-4 font-bold text-lg">{type}</h3>
+		<h3 class="mt-8 mb-4">{type}</h3>
 
 		<div class="flex flex-wrap justify-start -mx-2">
 			{#each filteredItems as item, id (id)}
