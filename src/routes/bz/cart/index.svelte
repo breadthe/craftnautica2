@@ -1,11 +1,12 @@
 <script>
 	import { page } from '$app/stores';
-	import { cart } from '$store';
-	// import Cart from '$lib/components/Cart.svelte';
+	import util from '$lib/util';
+	import Cart from '$lib/components/Cart.svelte';
 
 	const domain = $page.path.split('/')[1]; // ['/', 'bz']
+	const fullDomainName = util.fullDomainName(domain);
 </script>
 
 <section>
-	<!-- <Cart /> -->
+	<Cart {domain} {fullDomainName} />
 </section>
