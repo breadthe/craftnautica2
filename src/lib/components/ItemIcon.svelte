@@ -3,10 +3,11 @@
 
     export let id; // String
     export let small = false; // Boolean
+	export let klass = ''; // Merge default classes with prop classes; aka "class" but it's an invalid keyword so wth
 </script>
 
 <div
-	class={small ? 'item-icon--sm mr-2' : 'item-icon'}
+	class={(small ? 'item-icon--sm mr-2' : 'item-icon') + ` ${klass}`}
     style={`background-image: url(${util.icon(id)})`}
 />
 
