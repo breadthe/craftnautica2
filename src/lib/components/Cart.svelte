@@ -5,45 +5,18 @@
 	import Algo from '$lib/algo';
 	import CartItem from '$lib/components/CartItem.svelte';
 	import EmptyCartOrInventory from '$lib/components/EmptyCartOrInventory.svelte';
-	// import ComponentsList from '@/components/ComponentsList.vue';
+	import ComponentsList from '$lib/components/ComponentsList.svelte';
 	import SubNautica from '$lib/components/SubNautica.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 
 	export let domain;
 	export let fullDomainName;
 
-	let confirmEmptyCart = false;
 	let showAllRecipes = false;
 
 	$: cartItems = $cart[domain];
 	$: items = $itemsStore;
-	// shoppingList: vm => (new Algo(vm.items)).shoppingList(vm.cart),
-
-	function components(id) {
-		return new Algo(items).listOfMaterials(id);
-	}
-
-	/* export default {
-      data: () => ({
-        pretty: util.pretty,
-        icon: util.icon,
-        recipe: util.recipe,
-        confirmEmptyCart: false,
-        showAllRecipes: false,
-      }),
-      computed: {
-        domain: vm => vm.$route.name.replace(/cart/, ''), // strip out "cart" from "sncart"
-        fullDomainName: vm => util.fullDomainName(vm.domain),
-        cart: vm => vm.$store.state.Cart.cart[vm.domain] || [],
-        items: vm => vm.$store.state.App['items_' + vm.domain],
-        shoppingList: vm => (new Algo(vm.items)).shoppingList(vm.cart),
-      },
-      methods: {
-        components: function (id) {
-          return (new Algo(this.items)).listOfMaterials(id);
-        },
-      },
-    }; */
+    $: shoppingList = (new Algo(items)).shoppingList(cartItems);
 </script>
 
 <main class="container mx-auto mt-4">
@@ -90,7 +63,7 @@
 			<EmptyCartOrInventory what="Cart" {domain} />
 
 			<!-- ============= Shopping List ============= -->
-			<!-- <components-list :domain="domain" title="Shopping List" :list="shoppingList" /> -->
+            <ComponentsList {domain} list={shoppingList} title="Shopping List" />
 		</div>
 	{:else}
 		<div class="flex flex-col text-center">Your cart is empty.</div>
