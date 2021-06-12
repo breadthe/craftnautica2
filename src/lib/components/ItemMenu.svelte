@@ -30,8 +30,8 @@
 		class="flex items-center justify-between bg-blue-500 font-normal border-b border-cn-blue-900 p-2"
 	>
 		<a
-			href={`${domain}/details/${id}`}
-			class="flex items-center text-cn-blue-900 hover:text-gray-100"
+			href={`${domain}/i/${id}`}
+			class="flex items-center text-cn-blue-900 text-lg hover:text-gray-100"
 		>
 		    <ItemIcon {id} small />
 
