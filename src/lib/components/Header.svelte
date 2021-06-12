@@ -49,6 +49,7 @@
 					'sn'
 						? 'font-bold text-blue-100 border-blue-600'
 						: 'border-black hover:border-gray-400'}"
+					sveltekit:prefetch
 				>
 					Subnautica
 				</a>
@@ -59,6 +60,7 @@
 					'bz'
 						? 'font-bold text-blue-100 border-blue-600'
 						: 'border-black hover:border-gray-400'}"
+					sveltekit:prefetch
 				>
 					Below Zero
 				</a>
@@ -85,7 +87,7 @@
 					</a>
 
 					<!-- Cart -->
-					<a href={`/${domain}/cart`} class="flex items-center ml-4 sm:ml-8">
+					<a href={`/${domain}/cart`} class="flex items-center ml-4 sm:ml-8" sveltekit:prefetch>
 						<Icon
 							icon="shopping-cart"
 							color={cartCount ? 'text-blue-600' : 'text-blue-800'}
