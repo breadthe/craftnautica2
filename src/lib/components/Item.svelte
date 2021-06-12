@@ -11,8 +11,7 @@
 	// ["Thermoblade", {m: [{c: "Survival_Knife", q: 1}, {c: "Battery", q: 1}], t: "Recipes.Modification_Station.Survival_Knife"}]
 	export let item;
 
-	const id = item[0]; // The item unique identifier
-	let itemRef = `item_${id}`;
+	$: id = item[0]; // The item unique identifier
 
 	let menu = false; // whether to show the item menu
 
@@ -41,7 +40,7 @@
 </script>
 
 <div class="relative">
-	<div bind:this={itemRef} on:click={() => (menu = true)} use:clickOutsideAction={closeItemMenu} class="item-frame">
+	<div on:click={() => (menu = true)} use:clickOutsideAction={closeItemMenu} class="item-frame">
 		<ItemIcon {id} />
 
 		<span class="ml-2">
