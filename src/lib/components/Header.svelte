@@ -36,7 +36,7 @@
 					</span>
 					<span class="flex sm:hidden">
 						<img
-							src="favicons/favicon-32x32.png"
+							src="/favicons/favicon-32x32.png"
 							alt="Craftnautica - Subnautica & Subnautica: Below Zero crafting helper"
 							title="Craftnautica - Subnautica & Subnautica: Below Zero crafting helper"
 						/>
