@@ -9,7 +9,7 @@ module.exports = {
         extend: {
             colors: {
                 "cn-blue-900": "#12283a",
-                blue: colors.lightBlue,
+                blue: colors.sky,
             },
         },
     },
