@@ -37,41 +37,14 @@ body {
     @apply border;
     @apply border-blue-600;
     @apply rounded;
-
-    &.search {
-      @apply flex-1;
-      @apply w-full;
-      @apply max-w-sm;
-      @apply mt-4;
-      @apply ml-0;
-      @apply p-4;
-      @apply px-12;
-      @apply border-blue-800;
-      @apply bg-blue-800;
-      @screen sm {
-        @apply w-4/5;
-        @apply mt-0;
-        @apply ml-4;
-      }
-    }
   }
 
-  .item-frame {
-    @apply flex;
-    @apply items-center;
-    @apply m-2;
-    @apply py-2;
-    @apply px-3;
-    @apply cursor-pointer;
-    @apply border;
-    @apply border-blue-600;
-    @apply rounded;
-    @apply text-lg;
-    @apply font-light;
-    &:hover {
-      @apply bg-blue-800;
-      @apply border-blue-600;
-    }
+  h1 {
+      @apply text-3xl font-black;
+  }
+
+  h3 {
+      @apply text-lg font-bold;
   }
 
   .logo {
