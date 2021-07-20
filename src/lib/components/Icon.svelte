@@ -6,6 +6,7 @@
 	import FolderPlus from '$lib/components/icons/FolderPlus.svelte';
 	import Github from '$lib/components/icons/Github.svelte';
 	import MinusCircle from '$lib/components/icons/MinusCircle.svelte';
+	import Plus from '$lib/components/icons/Plus.svelte';
 	import PlusCircle from '$lib/components/icons/PlusCircle.svelte';
 	import Search from '$lib/components/icons/Search.svelte';
 	import Settings from '$lib/components/icons/Settings.svelte';
@@ -29,6 +30,7 @@
 		{ id: 'folder-plus', component: FolderPlus },
 		{ id: 'github', component: Github },
 		{ id: 'minus-circle', component: MinusCircle },
+		{ id: 'plus', component: Plus },
 		{ id: 'plus-circle', component: PlusCircle },
 		{ id: 'search', component: Search },
 		{ id: 'settings', component: Settings },
