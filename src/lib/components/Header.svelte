@@ -1,24 +1,25 @@
 <script>
 	import { getStores, navigating, page, session } from '$app/stores';
-	import { cart } from '$store';
+	import { cart, inventories } from '$store';
 	import Icon from '$lib/components/Icon.svelte';
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
-	$: showCart = ['sn', 'bz'].indexOf(domain) > -1;
+	$: showCartAndInventories = ['sn', 'bz'].indexOf(domain) > -1;
 
 	let cartCount;
-	$: {
+    let inventoriesCount;
+
+    // Total items in cart per domain
+    $: {
 		const tmpcart = $cart[domain];
 		cartCount = tmpcart ? tmpcart.length : 0;
 	}
 
-	let inventoriesCount = 1; // TODO make it computed
-
-	/* export default {
-        inventoriesCount: function () {
-          return this.$store.getters.inventoriesCount(this.domain);
-        },
-    }; */
+    // Total inventories per domain
+	$: {
+		const tmpinventories = Object.keys($inventories[domain]);
+		inventoriesCount = tmpinventories ? tmpinventories.length : 0;
+	}
 </script>
 
 <header>
@@ -68,7 +69,7 @@
 
 			<!-- Right side -->
 			<div class="flex items-center -mr-2 sm:-mr-0">
-				{#if showCart}
+				{#if showCartAndInventories}
 					<!-- Inventories -->
 					<a href={`/${domain}/inventories`} class="flex items-center ml-4 sm:ml-8">
 						<Icon
