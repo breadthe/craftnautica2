@@ -11,7 +11,7 @@
 			cart.init();
 
 			// Initialize inventories
-			// TODO
+            inventories.init();
 		}
 
 		return {};
@@ -19,7 +19,7 @@
 </script>
 
 <script>
-	import { itemsStore, cart } from '$store';
+	import { itemsStore, cart, inventories } from '$store';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.scss'; // app.postcss
