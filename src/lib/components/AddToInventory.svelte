@@ -17,9 +17,16 @@
 	let addedToInventory = false;
 
     /**
-     * @todo This does not get custom inventories
+     * Merge default domain inventories with custom ones
      */
-	$: inventoriesList = inventories.inventoriesList(domain);
+	let inventoriesList;
+	$: {
+		const domainInventories =
+			typeof $inventories[domain] !== 'undefined' ? Object.keys($inventories[domain]).sort() : [];
+
+		// Ensure default inventories are always at the top of the list
+		inventoriesList = Array.from(new Set([...util.defaultInventories, ...domainInventories]));
+	}
 
 	function openAddingToInventory(inventory) {
 		addingToInventory = true;
@@ -84,10 +91,10 @@
 		newInventory = '';
 	}
 
-    /**
-     * Counts how much qty of an item is in a specific inventory
-     * @todo Consider moving this to utils (used to be in store)
-     */
+	/**
+	 * Counts how much qty of an item is in a specific inventory
+	 * @todo Consider moving this to utils (used to be in store)
+	 */
 	function itemCountInInventory(inventory) {
 		const domainInventories = $inventories[domain];
 		if (typeof domainInventories === 'undefined') {
@@ -208,13 +215,15 @@
 					type="button"
 					on:click={() => addToNewInventory()}
 					class:disabled={() => quantity < 1}
-					class="bg-blue-900 hover:bg-cn-blue-900 text-gray-100 hover:text-white px-4 py-2 rounded">Create & Add</button
+					class="bg-blue-900 hover:bg-cn-blue-900 text-gray-100 hover:text-white px-4 py-2 rounded"
+					>Create & Add</button
 				>
 
 				<button
 					type="button"
 					on:click={cancelAddingToNewInventory}
-					class="underline text-gray-100 hover:text-white hover:text-blue-900 p-2 rounded">Cancel</button
+					class="underline text-gray-100 hover:text-white hover:text-blue-900 p-2 rounded"
+					>Cancel</button
 				>
 			</div>
 		</div>
