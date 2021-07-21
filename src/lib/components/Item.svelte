@@ -67,7 +67,7 @@
 		@apply text-lg;
 		@apply font-light;
 		&:hover {
-			@apply bg-blue-800;
+			@apply bg-blue-900;
 			@apply border-blue-600;
 		}
 	}
