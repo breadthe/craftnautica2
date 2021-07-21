@@ -2,21 +2,24 @@
 	import { createEventDispatcher } from 'svelte';
 	import { cart } from '$store';
 	import util from '$lib/util';
-	// import AddToInventory from '@/components/AddToInventory.vue';
+	import AddToInventory from '$lib/components/AddToInventory.svelte';
 	import ItemIcon from '$lib/components/ItemIcon.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 
 	export let id; // String
 	export let domain; // String
 
-    const dispatch = createEventDispatcher();
+	const dispatch = createEventDispatcher();
 	let addingToCart = false;
 	let addingToInventory = false;
 
 	function addToCart() {
 		addingToCart = true;
-        cart.addToCart({domain: domain, id: id, qty: 1});
-        setTimeout(() => { addingToCart = false; dispatch('closeItemMenu'); }, 750);
+		cart.addToCart({ domain: domain, id: id, qty: 1 });
+		setTimeout(() => {
+			addingToCart = false;
+			dispatch('closeItemMenu');
+		}, 750);
 	}
 
 	function addToInventory() {
@@ -33,7 +36,7 @@
 			href={`${domain}/i/${id}`}
 			class="flex items-center text-cn-blue-900 text-lg hover:text-gray-100"
 		>
-		    <ItemIcon {id} small />
+			<ItemIcon {id} small />
 
 			{util.pretty(id)}
 		</a>
@@ -42,10 +45,7 @@
 			<span>&nbsp;</span>
 		{/if}
 
-		<button
-			type="button"
-			on:click={() => dispatch('closeItemMenu')}
-		>
+		<button type="button" on:click={() => dispatch('closeItemMenu')}>
 			<Icon icon="x" color="text-cn-blue-900" klass="" />
 		</button>
 	</div>
@@ -63,18 +63,13 @@
 	{/if}
 
 	<!-- ============= Add to Inventory ============= -->
-	{#if !addingToInventory}
-		<div on:click|stopPropagation|preventDefault={addToInventory} class="menu-entry">
-			<Icon icon="folder-plus" color="text-cn-blue-900" title="Shopping cart" klass="mr-2" />
-			Add to Inventory
-		</div>
+	{#if addingToInventory}
+        <AddToInventory {id} {domain} on:closeItemMenu />
 	{:else}
-		<!-- <add-to-inventory
-		v-show="addingToInventory"
-		:id="id"
-		:domain="domain"
-		@closeItemMenu="$emit('closeItemMenu')"
-	/> -->
+        <div on:click|stopPropagation|preventDefault={addToInventory} class="menu-entry">
+            <Icon icon="folder-plus" color="text-cn-blue-900" title="Shopping cart" klass="mr-2" />
+            Add to Inventory
+        </div>
 	{/if}
 </div>
 
