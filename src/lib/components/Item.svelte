@@ -19,7 +19,7 @@
 		menu = false;
 	}
 
-    function clickOutsideAction(element, callbackFunction) {
+	function clickOutsideAction(element, callbackFunction) {
 		function onClick(event) {
 			if (!element.contains(event.target)) {
 				callbackFunction();
@@ -35,12 +35,12 @@
 			destroy() {
 				document.body.removeEventListener('click', onClick);
 			}
-		}
+		};
 	}
 </script>
 
-<div class="relative">
-	<div on:click={() => (menu = true)} use:clickOutsideAction={closeItemMenu} class="item-frame">
+<div class="relative" use:clickOutsideAction={closeItemMenu}>
+	<div on:click={() => (menu = true)} class="item-frame">
 		<ItemIcon {id} />
 
 		<span class="ml-2">

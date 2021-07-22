@@ -16,9 +16,9 @@
 	let addingToInventory = false;
 	let addedToInventory = false;
 
-    /**
-     * Merge default domain inventories with custom ones
-     */
+	/**
+	 * Merge default domain inventories with custom ones
+	 */
 	let inventoriesList;
 	$: {
 		const domainInventories =
@@ -113,122 +113,123 @@
 	}
 </script>
 
-<div class="">
-	<!-- ============= Inventories ============= -->
-	{#if !creatingNewInventory && !addingToInventory}
-		<div class="h-48 overflow-x-hidden overflow-y-scroll">
-			{#each inventoriesList as inventory (inventory)}
-				<div on:click={openAddingToInventory(inventory)} class="menu-entry justify-between">
-					{inventory}
+<!-- ============= Inventories ============= -->
+{#if !creatingNewInventory && !addingToInventory}
+	<div class="h-48 overflow-x-hidden overflow-y-scroll">
+		{#each inventoriesList as inventory (inventory)}
+			<div
+				on:click|stopPropagation={openAddingToInventory(inventory)}
+				class="menu-entry justify-between"
+			>
+				{inventory}
 
-					{#if itemCountInInventory(inventory)}
-						<small class="text-blue-400 font-bold mr-2">{itemCountInInventory(inventory)}</small>
-					{/if}
-				</div>
-			{/each}
-		</div>
-	{/if}
-
-	<!-- ============= Added to Inventory ============= -->
-	{#if addedToInventory}
-		<div class="added">Added to inventory</div>
-	{/if}
-
-	<!-- ============= + New Inventory ============= -->
-	{#if !creatingNewInventory && !addingToInventory && !addedToInventory}
-		<div
-			on:click={() => (creatingNewInventory = true)}
-			class="flex items-center bg-blue-500 text-cn-blue-900 font-normal border-t border-blue-900 p-2 py-4 cursor-pointer"
-		>
-			<Icon icon="plus" color="text-cn-blue-900" title="New Inventory" klass="mr-2" />New Inventory
-		</div>
-	{/if}
-
-	<!-- ============= Adding to Inventory ============= -->
-	{#if addingToInventory && !addedToInventory}
-		<div class="flex flex-wrap items-center bg-blue-600 text-cn-blue-900 font-normal p-2">
-			<div class="mb-4">
-				Adding to <span class="text-xl font-bold">{selectedInventory}</span>
+				{#if itemCountInInventory(inventory)}
+					<small class="text-blue-400 font-bold mr-2">{itemCountInInventory(inventory)}</small>
+				{/if}
 			</div>
+		{/each}
+	</div>
+{/if}
 
-			<small class="w-full leading-loose">Quantity (0-9999)</small>
+<!-- ============= Added to Inventory ============= -->
+{#if addedToInventory}
+	<div class="added">Added to inventory</div>
+{/if}
 
-			<input
-				type="number"
-				name="quantity"
-				min="1"
-				max="9999"
-				bind:value={quantity}
-				on:keyup={(e) => addToInventory(e)}
-				use:focusInputAction={true}
-				placeholder="Quantity (1-9999)"
-				class="w-full p-2 text-right focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
-			/>
+<!-- ============= + New Inventory ============= -->
+{#if !creatingNewInventory && !addingToInventory && !addedToInventory}
+	<div
+		on:click|stopPropagation={() => (creatingNewInventory = true)}
+		class="flex items-center bg-blue-500 text-cn-blue-900 font-normal border-t border-blue-900 p-2 py-4 cursor-pointer"
+	>
+		<Icon icon="plus" color="text-cn-blue-900" title="New Inventory" klass="mr-2" />New Inventory
+	</div>
+{/if}
 
-			<div class="flex items-center justify-between w-full mt-2">
-				<button
-					type="button"
-					on:click={() => addToInventory()}
-					class:disabled={() => parseInt(quantity, 10) < 1}
-					class="bg-blue-900 hover:bg-cn-blue-900 text-gray-100 hover:text-white px-4 py-2 rounded"
-					>Add</button
-				>
-
-				<button
-					type="button"
-					on:click={closeAddingToInventory}
-					class="underline text-gray-100 hover:text-white hover:text-blue-900 p-2 rounded"
-					>Cancel</button
-				>
-			</div>
+<!-- ============= Adding to Inventory ============= -->
+{#if addingToInventory && !addedToInventory}
+	<div class="flex flex-wrap items-center bg-blue-600 text-cn-blue-900 font-normal p-2">
+		<div class="mb-4">
+			Adding to <span class="text-xl font-bold">{selectedInventory}</span>
 		</div>
-	{/if}
 
-	<!-- ============= Create New Inventory ============= -->
-	{#if creatingNewInventory && !addedToInventory}
-		<div class="flex flex-wrap bg-blue-600 text-blue-900 font-normal border-blue-900 p-2">
-			<input
-				type="text"
-				name="newInventory"
-				bind:value={newInventory}
-				on:keyup={(e) => addToNewInventory(e)}
-				use:focusInputAction
-				placeholder="New Inventory"
-				class="w-full p-2 mb-4 focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
-			/>
+		<small class="w-full leading-loose">Quantity (0-9999)</small>
 
-			<small class="w-full">Quantity (0-9999)</small>
+		<input
+			type="number"
+			name="quantity"
+			min="1"
+			max="9999"
+			bind:value={quantity}
+			on:keyup={(e) => addToInventory(e)}
+			use:focusInputAction={true}
+			placeholder="Quantity (1-9999)"
+			class="w-full p-2 text-right text-gray-100 focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
+		/>
 
-			<input
-				type="number"
-				name="quantity"
-				min="1"
-				max="9999"
-				bind:value={quantity}
-				on:keyup={(e) => addToNewInventory(e)}
-				placeholder="Quantity (1-9999)"
-				class="w-full p-2 text-right focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
-			/>
+		<div class="flex items-center justify-between w-full mt-2">
+			<button
+				type="button"
+				on:click|stopPropagation={() => addToInventory()}
+				class:disabled={() => parseInt(quantity, 10) < 1}
+				class="bg-blue-900 hover:bg-cn-blue-900 text-gray-100 hover:text-white px-4 py-2 rounded"
+				>Add</button
+			>
 
-			<div class="flex items-center justify-between w-full mt-2">
-				<button
-					type="button"
-					on:click={() => addToNewInventory()}
-					class:disabled={() => quantity < 1}
-					class="bg-blue-900 hover:bg-cn-blue-900 text-gray-100 hover:text-white px-4 py-2 rounded"
-					>Create & Add</button
-				>
-
-				<button
-					type="button"
-					on:click={cancelAddingToNewInventory}
-					class="underline text-gray-100 hover:text-white hover:text-blue-900 p-2 rounded"
-					>Cancel</button
-				>
-			</div>
+			<button
+				type="button"
+				on:click|stopPropagation={closeAddingToInventory}
+				class="underline text-gray-100 hover:text-white hover:text-blue-900 p-2 rounded"
+				>Cancel</button
+			>
 		</div>
-	{/if}
-</div>
+	</div>
+{/if}
+
+<!-- ============= Create New Inventory ============= -->
+{#if creatingNewInventory && !addedToInventory}
+	<div class="flex flex-wrap bg-blue-600 text-blue-900 font-normal border-blue-900 p-2">
+		<input
+			type="text"
+			name="newInventory"
+			bind:value={newInventory}
+			on:keyup={(e) => addToNewInventory(e)}
+			use:focusInputAction
+			placeholder="New Inventory"
+			class="w-full p-2 mb-4 text-gray-100 focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
+		/>
+
+		<small class="w-full">Quantity (0-9999)</small>
+
+		<input
+			type="number"
+			name="quantity"
+			min="1"
+			max="9999"
+			bind:value={quantity}
+			on:keyup={(e) => addToNewInventory(e)}
+			placeholder="Quantity (1-9999)"
+			class="w-full p-2 text-right text-gray-100 focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
+		/>
+
+		<div class="flex items-center justify-between w-full mt-2">
+			<button
+				type="button"
+				on:click|stopPropagation={() => addToNewInventory()}
+				class:disabled={() => quantity < 1}
+				class="bg-blue-900 hover:bg-cn-blue-900 text-gray-100 hover:text-white px-4 py-2 rounded"
+				>Create & Add</button
+			>
+
+			<button
+				type="button"
+				on:click|stopPropagation={cancelAddingToNewInventory}
+				class="underline text-gray-100 hover:text-white hover:text-blue-900 p-2 rounded"
+				>Cancel</button
+			>
+		</div>
+	</div>
+{/if}
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
