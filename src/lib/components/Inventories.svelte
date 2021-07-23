@@ -33,7 +33,7 @@
 		</SubNautica>
 
 		{#if inventoriesCount}
-			<span class="text-2xl"><strong class="font-bold">{inventoriesCount}</strong> inventories</span>
+			<span class="text-2xl"><strong class="font-bold">{inventoriesCount}</strong> inventor{inventoriesCount === 1 ? 'y' : 'ies'}</span>
 		{/if}
 	</div>
 

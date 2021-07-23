@@ -17,6 +17,7 @@
 	$: cartItems = $cart[domain];
 	$: items = $itemsStore;
     $: shoppingList = (new Algo(items)).shoppingList(cartItems);
+    $: cartCount = cartItems.length;
 </script>
 
 <main class="container mx-auto mt-4">
@@ -30,12 +31,12 @@
 				klass="mr-4"
 			/>
 		</SubNautica>
-		{#if cartItems.length}
-			<span class="text-2xl"><strong class="font-bold">{cartItems.length}</strong> items</span>
+		{#if cartCount}
+			<span class="text-2xl"><strong class="font-bold">{cartCount}</strong> item{cartCount === 1 ? '' : 's'}</span>
 		{/if}
 	</div>
 
-	{#if cartItems.length}
+	{#if cartCount}
 		<button
 			type="button"
 			on:click={() => (showAllRecipes = !showAllRecipes)}
@@ -46,7 +47,7 @@
 	{/if}
 
 	<!-- ============= Cart Items ============= -->
-	{#if cartItems.length}
+	{#if cartCount}
 		<div class="mx-4">
 			{#each cartItems as item, index (index)}
 				<div class="">

@@ -15,6 +15,7 @@
 	let newInventoryName = inventory; // computed?
 
 	$: isDefaultInventory = util.isDefaultInventory(inventory);
+	$: inventoryCount = Object.keys(items).length; // number of items in current inventory
 
 	function deleteInventory() {
 		inventories.deleteInventory({
@@ -24,15 +25,15 @@
 	}
 
 	function renameInventory(event) {
-        // If there was a keyboard event, allow only Enter to trigger
+		// If there was a keyboard event, allow only Enter to trigger
 		if (typeof event !== 'undefined' && event.code !== 'Enter') return;
 
 		renamingInventory = false;
 
-        inventories.renameInventory({
+		inventories.renameInventory({
 			domain: domain,
 			oldInventoryName: inventory,
-            newInventoryName: newInventoryName
+			newInventoryName: newInventoryName
 		});
 	}
 </script>
@@ -57,7 +58,7 @@
 	{:else}
 		<h3
 			on:click={() => (!isDefaultInventory ? (renamingInventory = true) : null)}
-			class="flex items-center border-b border-grey-darkest py-2"
+			class="flex items-center justify-between border-b border-grey-darkest py-2"
 		>
 			{inventory}
 
@@ -70,10 +71,12 @@
 					<Icon icon="edit" color="text-blue-600" />
 				</button>
 			{/if}
+
+			<span>{inventoryCount} <span class="font-light">item{inventoryCount === 1 ? '' : 's'}</span></span>
 		</h3>
 	{/if}
 
-	{#if Object.keys(items).length}
+	{#if inventoryCount}
 		<div>
 			{#each Object.entries(items) as item (item[0])}
 				<InventoryItem {domain} {inventory} item={{ [item[0]]: item[1] }} />
