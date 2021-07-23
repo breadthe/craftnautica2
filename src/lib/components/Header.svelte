@@ -7,10 +7,10 @@
 	$: showCartAndInventories = domain ? ['sn', 'bz'].indexOf(domain) > -1 : false;
 
 	// Total items in cart per domain
-	$: cartCount = domain && $cart[domain] ? $cart[domain] : 0;
+	$: cartCount = domain && $cart[domain] ? $cart[domain].length : 0;
 
 	// Total inventories per domain
-	$: inventoriesCount = domain && $inventories[domain] ? $inventories[domain].length : 0;
+	$: inventoriesCount = domain && $inventories[domain] ? Object.keys($inventories[domain]).length : 0;
 </script>
 
 <header>
