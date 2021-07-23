@@ -31,7 +31,7 @@
 			/>
 		</SubNautica>
 		{#if cartItems.length}
-			<span>{cartItems.length} items</span>
+			<span class="text-2xl"><strong class="font-bold">{cartItems.length}</strong> items</span>
 		{/if}
 	</div>
 
@@ -69,7 +69,3 @@
 		<div class="flex flex-col text-center">Your cart is empty.</div>
 	{/if}
 </main>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-</style>
