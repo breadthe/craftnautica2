@@ -244,41 +244,6 @@ function initInventories() {
                 inventories.set(storedInventories);
             }
         },
-        // === Getters ===
-        /* domainInventories: (domain) => inventories[domain] || {}, */
-
-        // List of inventories per domain
-        /* inventoriesList: (domain) => {
-            // Merge default inventories...
-
-            // ... with user-created ones
-            const domainInventories = typeof inventories[domain] !== 'undefined'
-                ? Object.keys(inventories[domain]).sort()
-                : [];
-
-            // Ensure default inventories are always at the top of the list
-            return Array.from(new Set([...util.defaultInventories, ...domainInventories]));
-        }, */
-
-        // Total inventories per domain
-        /* inventoriesCount: domain => (
-            typeof inventories[domain] !== 'undefined'
-                ? Object.keys(inventories[domain]).length
-                : 0
-        ), */
-
-        // Counts how much qty of an item is in a specific inventory
-        /* itemCountInInventory: (domain, inventory, id) => {
-            const domainInventories = inventories[domain];
-            if (typeof domainInventories === 'undefined') {
-                return 0;
-            }
-            if (typeof domainInventories[inventory] === 'undefined') {
-                return 0;
-            }
-            return parseInt(domainInventories[inventory][id], 10);
-        }, */
-
     };
 }
 export const inventories = initInventories();

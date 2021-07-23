@@ -10,7 +10,6 @@
 	export let inventory; // String
 	export let items; // Object
 
-	let confirmEmptyInventory = false;
 	let confirmDeleteInventory = false;
 	let renamingInventory = false;
 	let newInventoryName = inventory; // computed?
