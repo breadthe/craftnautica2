@@ -221,7 +221,29 @@ function initInventories() {
 
             inventories.set(storedInventories);
         },
+        renameInventory(obj) {
+            const { domain, oldInventoryName, newInventoryName } = { ...obj };
 
+            const inventories = new Inventories();
+            const storedInventories = inventories.get();
+            const domainInventories = storedInventories[domain] || []; // inventory.sn | inventory.bz
+
+            // prevent naming to an existing inventory name, to a default inventory name, or to a default inventory
+            if (typeof domainInventories[newInventoryName] === 'undefined'
+                && !util.isDefaultInventory(oldInventoryName)
+                && !util.isDefaultInventory(newInventoryName)
+            ) {
+                // next 2 lines could probably be done more elegantly
+                domainInventories[newInventoryName] = domainInventories[oldInventoryName];
+                delete domainInventories[oldInventoryName];
+
+                storedInventories[domain] = domainInventories;
+
+                set(storedInventories);
+
+                inventories.set(storedInventories);
+            }
+        },
         // === Getters ===
         /* domainInventories: (domain) => inventories[domain] || {}, */
 
