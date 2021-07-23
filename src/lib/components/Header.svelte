@@ -4,22 +4,13 @@
 	import Icon from '$lib/components/Icon.svelte';
 
 	$: domain = $page.path.split('/')[1]; // ['/', 'sn']
-	$: showCartAndInventories = ['sn', 'bz'].indexOf(domain) > -1;
+	$: showCartAndInventories = domain ? ['sn', 'bz'].indexOf(domain) > -1 : false;
 
-	let cartCount;
-    let inventoriesCount;
+	// Total items in cart per domain
+	$: cartCount = domain && $cart[domain] ? $cart[domain] : 0;
 
-    // Total items in cart per domain
-    $: {
-		const tmpcart = $cart[domain];
-		cartCount = tmpcart ? tmpcart.length : 0;
-	}
-
-    // Total inventories per domain
-	$: {
-		const tmpinventories = Object.keys($inventories[domain]);
-		inventoriesCount = tmpinventories ? tmpinventories.length : 0;
-	}
+	// Total inventories per domain
+	$: inventoriesCount = domain && $inventories[domain] ? $inventories[domain].length : 0;
 </script>
 
 <header>
@@ -71,7 +62,11 @@
 			<div class="flex items-center -mr-2 sm:-mr-0">
 				{#if showCartAndInventories}
 					<!-- Inventories -->
-					<a href={`/${domain}/inventories`} class="flex items-center ml-4 sm:ml-8">
+					<a
+						href={`/${domain}/inventories`}
+						class="flex items-center ml-4 sm:ml-8"
+						title="Inventories"
+					>
 						<Icon
 							icon="box"
 							color={inventoriesCount ? 'text-blue-600' : 'text-blue-800'}
@@ -88,7 +83,12 @@
 					</a>
 
 					<!-- Cart -->
-					<a href={`/${domain}/cart`} class="flex items-center ml-4 sm:ml-8" sveltekit:prefetch>
+					<a
+						href={`/${domain}/cart`}
+						class="flex items-center ml-4 sm:ml-8"
+						sveltekit:prefetch
+						title="Shopping cart"
+					>
 						<Icon
 							icon="shopping-cart"
 							color={cartCount ? 'text-blue-600' : 'text-blue-800'}
@@ -106,7 +106,7 @@
 				{/if}
 
 				<!-- Settings -->
-				<a href="/settings" class="flex items-center ml-4 sm:ml-8">
+				<a href="/settings" class="flex items-center ml-4 sm:ml-8" title="Settings">
 					<Icon icon="settings" color="text-blue-600" title="Settings" />
 				</a>
 			</div>
