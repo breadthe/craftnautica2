@@ -1,5 +1,5 @@
 <script>
-	import { cart } from '$store';
+	import { cart, inventories } from '$store';
 	import Button from '$lib/components/Button.svelte';
 
 	export let what; // String
@@ -14,16 +14,7 @@
 				cart.emptyCart({ domain: domain });
 				break;
 			case 'Inventory':
-				if (inventory) {
-					// TODO
-					/* $store.dispatch('inventoryAction', {
-						action: 'empty',
-						domain: domain,
-						inventory: inventory,
-						id: null,
-						quantity: null
-					}); */
-				}
+                inventories.emptyInventory({ domain: domain, inventory: inventory });
 				break;
 			default:
 				break;

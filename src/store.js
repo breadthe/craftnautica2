@@ -241,17 +241,17 @@ function initInventories() {
 
             cart.set(storedCart);
         },
-        emptyCart(obj) {
-            const { domain } = obj;
+        emptyInventory(obj) {
+            const { domain, inventory } = { ...obj };
 
-            const cart = new Cart();
-            const storedCart = cart.get();
+            const inventories = new Inventories();
+            const storedInventories = inventories.get();
 
-            storedCart[domain] = [];
+            delete storedInventories[domain][inventory];
 
-            set(storedCart);
+            set(storedInventories);
 
-            cart.set(storedCart);
+            inventories.set(storedInventories);
         },
 
         // === Getters ===
