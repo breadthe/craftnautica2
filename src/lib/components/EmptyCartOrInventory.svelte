@@ -35,15 +35,12 @@
 	<div class="flex items-center justify-end mt-4">
 		Are you sure?
 
-		<!-- <v-button link @click="confirmEmpty = false">Cancel</v-button> -->
 		<Button link on:click={() => (confirmEmpty = false)}>Cancel</Button>
 
-		<!-- <v-button icon="trash-2" @click="emptyIt">Yes, Empty It</v-button> -->
 		<Button icon="trash-2" on:click={emptyIt}>Yes, Empty It</Button>
 	</div>
 {:else}
 	<div class="flex justify-end mt-4">
-		<!-- <v-button icon="trash-2" @click="confirmEmpty = true">Empty {{ what }}</v-button> -->
 		<Button icon="trash-2" on:click={() => (confirmEmpty = true)}>Empty { what }</Button>
 	</div>
 {/if}
