@@ -2,6 +2,7 @@
 	import Box from '$lib/components/icons/Box.svelte';
 	import ChevronDown from '$lib/components/icons/ChevronDown.svelte';
 	import ChevronUp from '$lib/components/icons/ChevronUp.svelte';
+	import Edit from '$lib/components/icons/Edit.svelte';
 	import ExternalLink from '$lib/components/icons/ExternalLink.svelte';
 	import FolderPlus from '$lib/components/icons/FolderPlus.svelte';
 	import Github from '$lib/components/icons/Github.svelte';
@@ -26,6 +27,7 @@
 		{ id: 'box', component: Box },
 		{ id: 'chevron-down', component: ChevronDown },
 		{ id: 'chevron-up', component: ChevronUp },
+		{ id: 'edit', component: Edit },
 		{ id: 'external-link', component: ExternalLink },
 		{ id: 'folder-plus', component: FolderPlus },
 		{ id: 'github', component: Github },
