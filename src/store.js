@@ -180,66 +180,19 @@ function initInventories() {
             inventories.set(storedInventories);
         },
         deleteItem(obj) {
-            const { domain, id } = { ...obj };
+            const { domain, inventory, id } = { ...obj };
 
-            const cart = new Cart();
-            const storedCart = cart.get();
+            const inventories = new Inventories();
+            const storedInventories = inventories.get();
+            const domainInventories = storedInventories[domain] || []; // inventory.sn | inventory.bz
 
-            const domainCart = storedCart[domain] || []; // cart.sn | cart.bz
+            delete domainInventories[inventory][id];
 
-            const ix = _findIndex(domainCart, id);
+            storedInventories[domain] = domainInventories;
 
-            if (ix > -1) {
-                domainCart.splice(ix, 1);
-            }
+            set(storedInventories);
 
-            storedCart[domain] = domainCart;
-
-            set(storedCart);
-
-            cart.set(storedCart);
-        },
-        incrementQty(obj) {
-            const { domain, id } = { ...obj };
-
-            const cart = new Cart();
-            const storedCart = cart.get();
-
-            const domainCart = storedCart[domain] || []; // cart.sn | cart.bz
-
-            const ix = _findIndex(domainCart, id);
-
-            if (ix > -1) {
-                domainCart[ix][id]++; // items is in cart, increment qty
-            }
-
-            storedCart[domain] = domainCart;
-
-            set(storedCart);
-
-            cart.set(storedCart);
-        },
-        decrementQty(obj) {
-            const { domain, id } = { ...obj };
-
-            const cart = new Cart();
-            const storedCart = cart.get();
-
-            const domainCart = storedCart[domain] || []; // cart.sn | cart.bz
-
-            const ix = _findIndex(domainCart, id);
-
-            if (ix > -1) {
-                if (domainCart[ix][id] > 1) {
-                    domainCart[ix][id]--; // items is in cart, decrement qty, make sure it doesn't go to 0
-                }
-            }
-
-            storedCart[domain] = domainCart;
-
-            set(storedCart);
-
-            cart.set(storedCart);
+            inventories.set(storedInventories);
         },
         emptyInventory(obj) {
             const { domain, inventory } = { ...obj };
@@ -253,12 +206,27 @@ function initInventories() {
 
             inventories.set(storedInventories);
         },
+        deleteInventory(obj) {
+            const { domain, inventory } = { ...obj };
+
+            const inventories = new Inventories();
+            const storedInventories = inventories.get();
+            const domainInventories = storedInventories[domain] || []; // inventory.sn | inventory.bz
+
+            delete domainInventories[inventory];
+
+            storedInventories[domain] = domainInventories;
+
+            set(storedInventories);
+
+            inventories.set(storedInventories);
+        },
 
         // === Getters ===
         /* domainInventories: (domain) => inventories[domain] || {}, */
 
         // List of inventories per domain
-        inventoriesList: (domain) => {
+        /* inventoriesList: (domain) => {
             // Merge default inventories...
 
             // ... with user-created ones
@@ -268,7 +236,7 @@ function initInventories() {
 
             // Ensure default inventories are always at the top of the list
             return Array.from(new Set([...util.defaultInventories, ...domainInventories]));
-        },
+        }, */
 
         // Total inventories per domain
         /* inventoriesCount: domain => (
