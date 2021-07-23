@@ -161,16 +161,16 @@ function initInventories() {
             }
         },
         addToInventory(obj) {
-            const { domain, inv, id, qty } = { ...obj };
+            const { domain, inventory, id, qty } = { ...obj };
 
             const inventories = new Inventories();
             const storedInventories = inventories.get();
             const domainInventories = storedInventories[domain] || []; // inventory.sn | inventory.bz
 
-            if (typeof domainInventories[inv] === 'undefined') {
-                domainInventories[inv] = { [id]: parseInt(qty, 10) };
+            if (typeof domainInventories[inventory] === 'undefined') {
+                domainInventories[inventory] = { [id]: parseInt(qty, 10) };
             } else {
-                domainInventories[inv][id] = parseInt(qty, 10);
+                domainInventories[inventory][id] = parseInt(qty, 10);
             }
 
             storedInventories[domain] = { ...domainInventories };

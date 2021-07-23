@@ -51,7 +51,7 @@
 		if (qty) {
 			inventories.addToInventory({
 				domain: domain,
-				inv: selectedInventory,
+				inventory: selectedInventory,
 				id: id,
 				qty: qty
 			});
