@@ -67,6 +67,6 @@
             <ComponentsList {domain} list={shoppingList} title="Shopping List" />
 		</div>
 	{:else}
-		<div class="flex flex-col text-center">Your cart is empty.</div>
+		<div class="flex flex-col text-center text-xl">Your cart is empty.</div>
 	{/if}
 </main>

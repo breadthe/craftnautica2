@@ -51,6 +51,6 @@
 			{/each}
 		</div>
 	{:else}
-		<div class="flex flex-col text-center">You don't have items in inventories yet.</div>
+		<div class="flex flex-col text-center text-xl">You don't have items in inventories yet.</div>
 	{/if}
 </main>
