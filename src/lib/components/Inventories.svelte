@@ -40,7 +40,7 @@
 	<!-- ============= Inventories ============= -->
 	{#if inventoriesCount}
 		<div>
-			<div class="max-w-4xl mx-4 sm:mx-auto">
+			<div class="max-w-4xl mx-4 sm:mx-auto text-lg">
 				An overview of all your inventories (vehicles, bases, lockers, and other storage locations)
 				where you store items and materials. You can easily see how much quantity of a certain
 				material you have in each location.
