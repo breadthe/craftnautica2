@@ -105,12 +105,6 @@
 		}
 		return parseInt(domainInventories[inventory][id], 10);
 	}
-
-	function focusInputAction(node, select = false) {
-		node.focus();
-
-		if (select) node.select();
-	}
 </script>
 
 <!-- ============= Inventories ============= -->
@@ -162,7 +156,7 @@
 			max="9999"
 			bind:value={quantity}
 			on:keyup={(e) => addToInventory(e)}
-			use:focusInputAction={true}
+			use:util.focusInputAction={true}
 			placeholder="Quantity (1-9999)"
 			class="w-full p-2 text-right text-gray-100 focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
 		/>

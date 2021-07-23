@@ -79,6 +79,18 @@ const validatedQty = (quantity) => {
 
 const isDefaultInventory = inventory => !defaultInventories.every(inv => inv.toUpperCase() !== inventory.toUpperCase());
 
+// ================== Actions ==================
+
+/**
+ * Focuses an input when needed (such as rendering/updating)
+ * Optionally selects the contents
+ */
+function focusInputAction(node, select = false) {
+    node.focus();
+
+    if (select) node.select();
+}
+
 export default {
-    defaultInventories, id, icon, pretty, types, filterByType, search, fullDomainName, formatType, recipe, usedIn, validatedQty, isDefaultInventory,
+    defaultInventories, id, icon, pretty, types, filterByType, search, fullDomainName, formatType, recipe, usedIn, validatedQty, isDefaultInventory, focusInputAction,
 };
