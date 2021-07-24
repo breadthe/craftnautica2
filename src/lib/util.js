@@ -91,6 +91,25 @@ function focusInputAction(node, select = false) {
     if (select) node.select();
 }
 
+function clickOutsideAction(element, callbackFunction) {
+    function onClick(event) {
+        if (!element.contains(event.target)) {
+            callbackFunction();
+        }
+    }
+
+    document.body.addEventListener('click', onClick);
+
+    return {
+        update(newCallbackFunction) {
+            callbackFunction = newCallbackFunction;
+        },
+        destroy() {
+            document.body.removeEventListener('click', onClick);
+        }
+    };
+}
+
 export default {
-    defaultInventories, id, icon, pretty, types, filterByType, search, fullDomainName, formatType, recipe, usedIn, validatedQty, isDefaultInventory, focusInputAction,
+    defaultInventories, id, icon, pretty, types, filterByType, search, fullDomainName, formatType, recipe, usedIn, validatedQty, isDefaultInventory, focusInputAction, clickOutsideAction,
 };

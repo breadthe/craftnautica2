@@ -18,28 +18,9 @@
 	function closeItemMenu() {
 		menu = false;
 	}
-
-	function clickOutsideAction(element, callbackFunction) {
-		function onClick(event) {
-			if (!element.contains(event.target)) {
-				callbackFunction();
-			}
-		}
-
-		document.body.addEventListener('click', onClick);
-
-		return {
-			update(newCallbackFunction) {
-				callbackFunction = newCallbackFunction;
-			},
-			destroy() {
-				document.body.removeEventListener('click', onClick);
-			}
-		};
-	}
 </script>
 
-<div class="relative" use:clickOutsideAction={closeItemMenu}>
+<div class="relative" use:util.clickOutsideAction={closeItemMenu}>
 	<div on:click={() => (menu = true)} class="item-frame">
 		<ItemIcon {id} />
 

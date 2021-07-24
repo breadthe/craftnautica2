@@ -52,25 +52,6 @@
 	function closeItemMenu() {
 		menu = false;
 	}
-
-	function clickOutsideAction(element, callbackFunction) {
-		function onClick(event) {
-			if (!element.contains(event.target)) {
-				callbackFunction();
-			}
-		}
-
-		document.body.addEventListener('click', onClick);
-
-		return {
-			update(newCallbackFunction) {
-				callbackFunction = newCallbackFunction;
-			},
-			destroy() {
-				document.body.removeEventListener('click', onClick);
-			}
-		};
-	}
 </script>
 
 <section class="mx-4 sm:mx-auto">
@@ -106,7 +87,7 @@
 
 		<div class="flex">
 			<!-- ============= Add to Inventory ============= -->
-			<div use:clickOutsideAction={closeItemMenu} class="relative ml-4">
+			<div use:util.clickOutsideAction={closeItemMenu} class="relative ml-4">
 				<button
 					on:click|stopPropagation|preventDefault={(menu = true)}
 					class="flex items-center text-gray-400 border border-blue-600 rounded p-2 text-2xl hover:bg-blue-600 group hover:text-white"
