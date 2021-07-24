@@ -155,7 +155,7 @@
 
 	<!-- ============= Recipe / Base Components ============= -->
 	{#if rawMat}
-		<div class="text-center">This item is a raw material or base component.</div>
+		<div class="text-center text-lg">This item is a raw material or base component.</div>
 	{:else}
 		<!-- ============= Recipe ============= -->
 		<ComponentsList {domain} list={recipe(id)} title="Recipe" />
