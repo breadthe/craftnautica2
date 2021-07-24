@@ -60,19 +60,24 @@
 			on:click={() => (!isDefaultInventory ? (renamingInventory = true) : null)}
 			class="flex items-center justify-between border-b border-grey-darkest py-2"
 		>
-			{inventory}
+			<span class="flex items-center space-x-2">
+				<span>{inventory}</span>
 
-			{#if !isDefaultInventory}
-				<button
-					on:click={() => (renamingInventory = true)}
-					class="flex ml-2"
-					title="Edit inventory name"
-				>
-					<Icon icon="edit" color="text-blue-600" />
-				</button>
-			{/if}
+				{#if !isDefaultInventory}
+					<button
+						on:click={() => (renamingInventory = true)}
+						class="flex ml-2"
+						title="Edit inventory name"
+					>
+						<Icon icon="edit" color="text-blue-600" />
+					</button>
+				{/if}
+			</span>
 
-			<span>{inventoryCount} <span class="font-light">item{inventoryCount === 1 ? '' : 's'}</span></span>
+			<span
+				>{inventoryCount}
+				<span class="font-light">item{inventoryCount === 1 ? '' : 's'}</span></span
+			>
 		</h3>
 	{/if}
 
