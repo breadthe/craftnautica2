@@ -81,7 +81,7 @@
 			<!-- ============= Add to Inventory ============= -->
 			<div use:util.clickOutsideAction={closeItemMenu} class="relative ml-4">
 				<button
-					on:click|stopPropagation|preventDefault={(menu = true)}
+					on:click={() => (menu = true)}
 					class="flex items-center text-gray-400 border border-blue-600 rounded p-2 text-2xl hover:bg-blue-600 group hover:text-white"
 					title="Add to Inventory"
 				>
@@ -102,7 +102,7 @@
 			<!-- ============= Add to Cart ============= -->
 			<div class="ml-4">
 				<button
-					on:click|stopPropagation|preventDefault={() => addToCart()}
+					on:click={() => addToCart()}
 					class="flex items-center text-gray-400 border border-blue-600 rounded p-2 text-2xl hover:bg-blue-600 group hover:text-white relative"
 					title="Add to Cart"
 				>
