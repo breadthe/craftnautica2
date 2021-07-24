@@ -188,7 +188,7 @@
 			name="newInventory"
 			bind:value={newInventory}
 			on:keyup={(e) => addToNewInventory(e)}
-			use:focusInputAction
+			use:util.focusInputAction
 			placeholder="New Inventory"
 			class="w-full p-2 mb-4 text-gray-100 focus:bg-cn-blue-900 focus:outline-none focus:ring-1 focus:ring-gray-100"
 		/>
