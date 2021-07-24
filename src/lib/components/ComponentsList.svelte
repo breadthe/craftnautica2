@@ -8,7 +8,15 @@
 </script>
 
 <div class="flex flex-col mt-4">
-	<h3 class="border-b border-gray-600 py-2">{title}</h3>
+	<h3 class="flex justify-between border-b border-gray-600 py-2">
+		{title}
+
+		{#if list.length}
+			<span class="font-light">
+				<strong class="font-bold">{list.length}</strong> item{list.length === 1 ? '' : 's'}
+			</span>
+		{/if}
+	</h3>
 
 	{#each list as component (component.c)}
 		<div
