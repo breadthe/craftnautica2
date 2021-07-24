@@ -1,7 +1,7 @@
 <script>
 	import { itemsStore, cart } from '$store';
-	import Algo from '$lib/algo';
 	import util from '$lib/util';
+	import Algo from '$lib/algo';
 	import ComponentsList from '$lib/components/ComponentsList.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import ItemIcon from '$lib/components/ItemIcon.svelte';
@@ -35,14 +35,6 @@
 		}, 750);
 	}
 
-	function formatType(type) {
-		return util.formatType(type);
-	}
-
-	function recipe(item) {
-		return util.recipe(item, items);
-	}
-
 	function wikiLink(item) {
 		return domain === 'sn'
 			? `https://subnautica.fandom.com/wiki/${item}`
@@ -58,7 +50,7 @@
 	<div class="flex justify-start">
 		<a href={`/${domain}`}>{fullDomainName}</a>
 		&nbsp;&gt;
-		{formatType(type)}
+		{util.formatType(type)}
 	</div>
 
 	<div class="flex justify-between items-center my-8 text-lg font-light">
@@ -139,7 +131,7 @@
 		<div class="text-center text-lg">This item is a raw material or base component.</div>
 	{:else}
 		<!-- ============= Recipe ============= -->
-		<ComponentsList {domain} list={recipe(id)} title="Recipe" />
+		<ComponentsList {domain} list={util.recipe(id)} title="Recipe" />
 
 		<!-- ============= Base Components ============= -->
 		<ComponentsList {domain} list={components} title="Base Components" />
