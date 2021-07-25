@@ -244,6 +244,34 @@ function initInventories() {
                 inventories.set(storedInventories);
             }
         },
+        /**
+         * How much quantity of this item is in each inventory
+         */
+        qtyInInventories(domain, id) {
+            const inventories = new Inventories();
+            const storedInventories = inventories.get();
+            const domainInventories = storedInventories[domain] || []; // inventory.sn | inventory.bz
+
+            if (!domainInventories.length) return
+
+            const arr = [];
+
+            Object.entries(domainInventories)
+                .forEach((inventory) => {
+                    const itemsInInventory = Object.entries(inventory[1]); // all the items in the inventory being iterated over
+
+                    itemsInInventory.forEach((item) => {
+                        if (item[0] === id) {
+                            arr.push({
+                                i: inventory[0],
+                                q: item[1],
+                            });
+                        }
+                    });
+                });
+
+            return arr;
+        },
     };
 }
 export const inventories = initInventories();

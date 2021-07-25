@@ -1,5 +1,5 @@
 <script>
-	import { itemsStore, cart } from '$store';
+	import { itemsStore, cart, inventories } from '$store';
 	import util from '$lib/util';
 	import Algo from '$lib/algo';
 	import ComponentsList from '$lib/components/ComponentsList.svelte';
@@ -14,15 +14,10 @@
 	$: items = $itemsStore;
 	$: type = items[id].t;
 	$: rawMat = type.split('.')[0] === 'Raw_Materials';
-	// $: qtyInInventories = $itemsStore.qtyInInventories(domain, id)
-	// qtyInInventories: function () {
-	//   return this.$store.getters.qtyInInventories(this.domain, this.id);
-	// },
-	// totalQtyInInventories: function () {
-	//   return this.qtyInInventories.reduce((total, i) => total + i.q, 0);
-	// },
 	$: components = new Algo(items).listOfMaterials(id);
 	$: usedIn = util.usedIn(id, items);
+
+	const domainInventories = $inventories[domain];
 
 	let menu = false;
 	let addingToCart = false;
@@ -43,6 +38,37 @@
 
 	function closeItemMenu() {
 		menu = false;
+	}
+
+	/**
+	 * How much quantity of the current item is in each inventory
+	 */
+	function qtyInInventories() {
+		const arr = [];
+
+		if (!domainInventories) return arr;
+
+		Object.entries(domainInventories).forEach((inventory) => {
+			const itemsInInventory = Object.entries(inventory[1]); // all the items in the inventory being iterated over
+
+			itemsInInventory.forEach((item) => {
+				if (item[0] === id) {
+					arr.push({
+						i: inventory[0],
+						q: item[1]
+					});
+				}
+			});
+		});
+
+		return arr;
+	}
+
+	/**
+	 * Total quantity of the current item across all inventories
+	 */
+	function totalQtyInInventories() {
+		return qtyInInventories().reduce((total, i) => total + i.q, 0);
 	}
 </script>
 
@@ -143,27 +169,31 @@
 	{/if}
 
 	<!-- ============= Inventories containing this item ============= -->
-	<!-- <div v-if="qtyInInventories.length" class="mt-8">
-		<div class="flex items-center justify-between border-b border-grey-darkest py-2">
-			<h3 class="flex items-center">
-				<a href={`/${domain}/inventories`} class="flex items-center">
-                    <Icon icon="box" color="text-cn-blue-900" title="Inventories" />
-					Inventories
-				</a>
-				<small class="font-light ml-2">({qtyInInventories.length})</small>
-			</h3>
-			<span class="font-bold text-lg">{totalQtyInInventories}</span>
-		</div>
-
-		<div
-			v-for="(inventory, i) in qtyInInventories"
-			:key="i"
-			class="flex justify-between items-center my-2 -mx-2 p-2 text-lg font-light hover:bg-blue-darker"
-		>
-			<div class="flex items-center font-bold">
-				{util.pretty(inventory.i)}
+	{#if qtyInInventories()}
+		<div class="mt-8">
+			<div class="flex items-center justify-between border-b border-gray-600 py-2">
+				<h3 class="flex items-center space-x-2">
+					<a href={`/${domain}/inventories`} class="flex items-center space-x-2">
+						<Icon icon="box" color="text-blue-600" title="Inventories" />
+						<span>Inventories</span>
+					</a>
+					<small class="font-light">({qtyInInventories().length})</small>
+				</h3>
+                <span class="text-lg">
+                    <strong class="font-bold">{totalQtyInInventories()}</strong> item{totalQtyInInventories() === 1 ? '' : 's'}
+                </span>
 			</div>
-			<div>{inventory.q}</div>
+
+			{#each qtyInInventories() as inventory, i (i)}
+				<div
+					class="flex justify-between items-center my-2 -mx-2 p-2 text-lg font-light hover:bg-blue-darker"
+				>
+					<div class="flex items-center font-bold">
+						{util.pretty(inventory.i)}
+					</div>
+					<div>{inventory.q}</div>
+				</div>
+			{/each}
 		</div>
-	</div> -->
+	{/if}
 </section>
