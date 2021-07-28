@@ -2,6 +2,7 @@
 	import Box from '$lib/components/icons/Box.svelte';
 	import ChevronDown from '$lib/components/icons/ChevronDown.svelte';
 	import ChevronUp from '$lib/components/icons/ChevronUp.svelte';
+	import Download from '$lib/components/icons/Download.svelte';
 	import Edit from '$lib/components/icons/Edit.svelte';
 	import ExternalLink from '$lib/components/icons/ExternalLink.svelte';
 	import FolderPlus from '$lib/components/icons/FolderPlus.svelte';
@@ -14,6 +15,7 @@
 	import ShoppingCart from '$lib/components/icons/ShoppingCart.svelte';
 	import Trash2 from '$lib/components/icons/Trash2.svelte';
 	import Twitter from '$lib/components/icons/Twitter.svelte';
+	import Upload from '$lib/components/icons/Upload.svelte';
 	import X from '$lib/components/icons/X.svelte';
 	import XCircle from '$lib/components/icons/XCircle.svelte';
 
@@ -27,6 +29,7 @@
 		{ id: 'box', component: Box },
 		{ id: 'chevron-down', component: ChevronDown },
 		{ id: 'chevron-up', component: ChevronUp },
+		{ id: 'download', component: Download },
 		{ id: 'edit', component: Edit },
 		{ id: 'external-link', component: ExternalLink },
 		{ id: 'folder-plus', component: FolderPlus },
@@ -39,6 +42,7 @@
 		{ id: 'shopping-cart', component: ShoppingCart },
 		{ id: 'trash-2', component: Trash2 },
 		{ id: 'twitter', component: Twitter },
+		{ id: 'upload', component: Upload },
 		{ id: 'x', component: X },
 		{ id: 'x-circle', component: XCircle },
 	];
