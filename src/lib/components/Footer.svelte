@@ -25,7 +25,7 @@
 			v{ version }
 		</div>
 		<div class="w-16 flex justify-between">
-			<a href="https://github.com/breadthe/craftnautica" aria-label="Craftnautica on Github">
+			<a href="https://github.com/breadthe/craftnautica2" aria-label="Craftnautica 2.0 on Github">
 				<Icon icon="github" color="text-blue-500"></Icon>
 			</a>
 			<a href="https://twitter.com/brbcoding" aria-label="Find me on Twitter">
@@ -33,7 +33,7 @@
 			</a>
 		</div>
 		<div class="flex flex-col">
-			<a href="/contact" class="mb-4 sm:mb-2" title="Contact">Contact</a>
+			<a href="/contact" class="mb-4 sm:mb-2" title="About/Contact">About/Contact</a>
 			<a href="/privacy" class="mb-4 sm:mb-2" title="Privacy policy">Privacy Policy</a>
 		</div>
 	</div>

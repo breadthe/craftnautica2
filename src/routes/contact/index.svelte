@@ -1,9 +1,16 @@
 <section class="max-w-4xl mx-auto">
-    <h1>Contact</h1>
+    <h1>About/Contact</h1>
 
     <p class="mt-4 leading-normal">Hi, I'm Constantin, a web developer in Chicago, Illinois. Sometimes I make apps like this one, for fun.</p>
+
+    <p class="mt-4 leading-normal">Craftnautica 2.0 is made with <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a> and is <a href="https://github.com/breadthe/craftnautica2" target="_blank">open-source</a>.</p>
+
+    <p class="mt-4 leading-normal">Looking for the source code for Craftnautica 1.0 (VueJS)? Get it <a href="https://github.com/breadthe/craftnautica" target="_blank">here</a>.</p>
+
     <p class="mt-4 leading-normal">If you'd like to contact me, the best way is to DM me on <a href="https://twitter.com/brbcoding" title="Contact me on Twitter">Twitter</a>.</p>
+
     <p class="mt-4 leading-normal">Thanks for visiting!</p>
+
 
     <!--<p class="mt-4">We'll get back to you ASAP as possible!</p>
 
