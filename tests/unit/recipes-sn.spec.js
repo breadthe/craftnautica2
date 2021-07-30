@@ -1,5 +1,5 @@
-import itemsSn from '@/items-sn';
-import Algo from '@/algo';
+import itemsSn from '../../src/lib/items-sn';
+import Algo from '../../src/lib/algo';
 
 const algo = new Algo(itemsSn);
 
