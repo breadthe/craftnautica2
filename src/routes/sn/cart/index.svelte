@@ -1,9 +1,21 @@
+<script context="module">
+	// Is called once on initial page load
+	export async function load({ page, fetch, session, context }) {
+		const domain = page.path.split('/')[1]; // ['/', 'sn']
+
+		return {
+            props: {
+                domain: domain
+            }
+        };
+	}
+</script>
+
 <script>
-	import { page } from '$app/stores';
 	import util from '$lib/util';
 	import Cart from '$lib/components/Cart.svelte';
 
-	const domain = $page.path.split('/')[1]; // ['/', 'sn']
+    export let domain;
 	const fullDomainName = util.fullDomainName(domain);
 </script>
 
