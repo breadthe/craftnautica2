@@ -28,7 +28,7 @@
 	}
 </script>
 
-<section class="border-b border-grey-darkest flex flex-col sm:flex-row my-8 pb-8">
+<section class="border-b border-blue-900 flex flex-col sm:flex-row my-8 pb-8">
 	<h2 class="w-full sm:w-1/6 text-2xl font-bold">Export</h2>
 
 	<div class="w-full sm:w-5/6">
