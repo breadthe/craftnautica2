@@ -10,6 +10,8 @@ module.exports = {
             colors: {
                 "cn-blue-900": "#12283a",
                 blue: colors.sky,
+                green: colors.emerald,
+                red: colors.rose,
             },
         },
     },
