@@ -5,7 +5,7 @@
 
     <p class="mt-4 leading-normal">Craftnautica 2.0 is made with <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a> and is <a href="https://github.com/breadthe/craftnautica2" target="_blank">open-source</a>.</p>
 
-    <p class="mt-4 leading-normal">Looking for the source code for Craftnautica 1.0 (VueJS)? Get it <a href="https://github.com/breadthe/craftnautica" target="_blank">here</a>.</p>
+    <p class="mt-4 leading-normal">Craftnautica 1.0 (made with VueJS 2.5) can be found <a href="https://craftnautica-legacy.netlify.app/" target="_blank">here</a>, and the source code <a href="https://github.com/breadthe/craftnautica" target="_blank">here</a>.</p>
 
     <p class="mt-4 leading-normal">If you'd like to contact me, the best way is to DM me on <a href="https://twitter.com/brbcoding" title="Contact me on Twitter">Twitter</a>.</p>
 
