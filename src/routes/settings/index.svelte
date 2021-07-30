@@ -4,6 +4,10 @@
 	import ImportData from '$lib/components/ImportData.svelte';
 </script>
 
+<svelte:head>
+    <title>Settings: Export & Import | Craftnautica</title>
+</svelte:head>
+
 <section class="max-w-4xl mx-auto">
 	<h1 class="flex items-center">
 		<Icon icon="settings" size="40" color="text-blue-600" title="Settings" klass="mr-4" />

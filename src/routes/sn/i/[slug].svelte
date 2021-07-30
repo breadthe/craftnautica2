@@ -26,6 +26,10 @@
     const item = $itemsStore[id];
 </script>
 
+<svelte:head>
+    <title>{util.pretty(id)} | Subnautica | Craftnautica</title>
+</svelte:head>
+
 <section>
     {#if item}
 	    <Details {id} {domain} {fullDomainName} />

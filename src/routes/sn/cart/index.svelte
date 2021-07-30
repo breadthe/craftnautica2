@@ -7,6 +7,10 @@
 	const fullDomainName = util.fullDomainName(domain);
 </script>
 
+<svelte:head>
+    <title>Subnautica shopping cart | Craftnautica</title>
+</svelte:head>
+
 <section>
 	<Cart {domain} {fullDomainName} />
 </section>

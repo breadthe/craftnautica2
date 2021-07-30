@@ -7,6 +7,10 @@
 	const fullDomainName = util.fullDomainName(domain);
 </script>
 
+<svelte:head>
+    <title>Subnautica: Below Zero item inventories | Craftnautica</title>
+</svelte:head>
+
 <section>
 	<Inventories {domain} {fullDomainName} />
 </section>

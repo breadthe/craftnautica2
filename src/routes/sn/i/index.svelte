@@ -11,3 +11,7 @@
 		}
 	}
 </script>
+
+<svelte:head>
+    <title>Subnautica Items | Craftnautica</title>
+</svelte:head>

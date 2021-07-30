@@ -11,3 +11,7 @@
 		}
 	}
 </script>
+
+<svelte:head>
+    <title>Subnautica: Below Zero item list | Craftnautica</title>
+</svelte:head>
