@@ -12,10 +12,11 @@
 	export let domain;
 	export let fullDomainName;
 
-	let showAllRecipes = false;
+	const items = $itemsStore;
+
+    let showAllRecipes = false;
 
 	$: cartItems = $cart[domain];
-	$: items = $itemsStore;
     $: shoppingList = (new Algo(items)).shoppingList(cartItems);
     $: cartCount = cartItems.length;
 </script>
