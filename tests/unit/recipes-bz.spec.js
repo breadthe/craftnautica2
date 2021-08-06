@@ -99,10 +99,25 @@ describe('Test recipes', () => {
     });
 
     /* Recipes.Fabricator.Personal.Equipment */
-    /* test('it returns the correct list of base materials for Recipes.Fabricator.Personal.Equipment', () => {
-        expect(algo.listOfMaterials('Standard_O₂_Tank')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Creepvine_Sample', q: 2 }]);
+    test('it returns the correct list of base materials for Recipes.Fabricator.Personal.Equipment', () => {
+        expect(algo.listOfMaterials('Booster_Tank')).toEqual([{ c: 'Titanium', q: 6 }, { c: 'Creepvine_Sample', q: 2 }, { c: 'Quartz', q: 4 }, { c: 'Silver_Ore', q: 3 }]);
+        expect(algo.listOfMaterials('Cold_Suit')).toEqual([{ c: 'Creepvine_Sample', q: 4 }, { c: 'Snow_Stalker_Fur', q: 2 }]);
+        expect(algo.listOfMaterials('Compass')).toEqual([{ c: 'Copper_Ore', q: 4 }, { c: 'Silver_Ore', q: 4 }]);
+        expect(algo.listOfMaterials('Fins')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 2 }]);
+        expect(algo.listOfMaterials('First_Aid_Kit')).toEqual([{ c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Floting_Air_Pump')).toEqual([{ c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Headlamp')).toEqual([{ c: 'Ion_Cube', q: 1 }, { c: 'Gold', q: 1 }, { c: 'Silver_Ore', q: 1 }, { c: 'Lithium', q: 1 }, { c: 'Quartz', q: 2 }, { c: 'Titanium', q: 1 }]);
         expect(algo.listOfMaterials('High_Capacity_O₂_Tank')).toEqual([{ c: 'Titanium', q: 6 }, { c: 'Creepvine_Sample', q: 2 }, { c: 'Quartz', q: 4 }, { c: 'Silver_Ore', q: 1 }]);
-        expect(algo.listOfMaterials('Fins')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }]);
-    }); */
+        expect(algo.listOfMaterials('Pipe')).toEqual([{ c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Rebreather')).toEqual([{ c: 'Silver_Ore', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Reinforced_Dive_Suit')).toEqual([{ c: 'Ruby', q: 1 }, { c: 'Spiral_Plant_Clipping', q: 1 }, { c: 'Diamond', q: 2 }, { c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Standard_O₂_Tank')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Stillsuit')).toEqual([{ c: 'Ruby', q: 3 }, { c: 'Spiral_Plant_Clipping', q: 1 }, { c: 'Gel_Sack', q: 2 }, { c: 'Copper_Ore', q: 4 }]);
+        expect(algo.listOfMaterials('Swim_Charge_Fins')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Young_Cotton_Anemone', q: 3 }, { c: 'Salt_Deposit', q: 1 }, { c: 'Silver_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Thermos')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Quartz', q: 2 }]);
+        expect(algo.listOfMaterials('Ultra_High_Capacity_Tank')).toEqual([{ c: 'Titanium', q: 6 }, { c: 'Creepvine_Sample', q: 2 }, { c: 'Quartz', q: 4 }, { c: 'Silver_Ore', q: 1 }, { c: 'Lithium', q: 4 }]);
+    });
+
     /* Recipes.Fabricator.Personal.Tools */
+    // @todo
 });

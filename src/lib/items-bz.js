@@ -299,12 +299,52 @@ export default {
         ],
     },
 
-    // ============= Recipes.Fabricator.Sustenance.Personal.Equipment
-    'Standard_O₂_Tank': { // TODO: Figure out if non-ASCII subscript works for linking & stuff
-        t: 'Recipes.Fabricator.Sustenance.Personal.Equipment',
+    // ============= Recipes.Fabricator.Personal.Equipment
+    Booster_Tank: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'High_Capacity_O₂_Tank', q: 1 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    Cold_Suit: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Fiber_Mesh', q: 2 },
+            { c: 'Snow_Stalker_Fur', q: 2 },
+        ],
+    },
+    Compass: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Copper_Wire', q: 2 },
+            { c: 'Wiring_Kit', q: 2 },
+        ],
+    },
+    Fins: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Silicone_Rubber', q: 2 },
+        ],
+    },
+    First_Aid_Kit: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    Floting_Air_Pump: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
         m: [
             { c: 'Titanium', q: 2 },
-            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    Headlamp: {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Ion_Battery', q: 1 },
+            { c: 'Glass', q: 1 },
+            { c: 'Titanium', q: 1 },
         ],
     },
     /**
@@ -316,18 +356,70 @@ export default {
         t: 'Recipes.Fabricator.Personal.Equipment',
         m: [
             { c: 'Standard_O₂_Tank', q: 1 },
-            { c: 'Titanium', q: 4 },
             { c: 'Glass', q: 2 },
+            { c: 'Titanium', q: 4 },
             { c: 'Silver_Ore', q: 1 },
         ],
     },
-    Fins: {
+    'Pipe': {
         t: 'Recipes.Fabricator.Personal.Equipment',
         m: [
-            { c: 'Silicone_Rubber', q: 2 },
+            { c: 'Titanium', q: 2 },
         ],
     },
-    // TODO: remaining Personal.Equipment
+    'Rebreather': {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Silicone_Rubber', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    'Reinforced_Dive_Suit': {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Synthetic_Fibers', q: 1 },
+            { c: 'Diamond', q: 2 },
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    'Standard_O₂_Tank': { // TODO: Figure out if non-ASCII subscript works for linking & stuff
+        t: 'Recipes.Fabricator.Sustenance.Personal.Equipment',
+        m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    'Stillsuit': {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Synthetic_Fibers', q: 1 },
+            { c: 'Aerogel', q: 2 },
+            { c: 'Copper_Wire', q: 2 },
+        ],
+    },
+    'Swim_Charge_Fins': {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Fins', q: 1 },
+            { c: 'Polyaniline', q: 1 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    'Thermos': {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Glass', q: 1 },
+        ],
+    },
+    'Ultra_High_Capacity_Tank': {
+        t: 'Recipes.Fabricator.Personal.Equipment',
+        m: [
+            { c: 'High_Capacity_O₂_Tank', q: 1 },
+            { c: 'Lithium', q: 4 },
+        ],
+    },
 
     // TODO: Personal.Tools
 
