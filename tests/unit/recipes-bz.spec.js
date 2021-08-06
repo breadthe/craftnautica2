@@ -79,17 +79,24 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Wiring_Kit')).toEqual([{ c: 'Silver_Ore', q: 2 }]);
     });
 
-    /* Recipes.Fabricator.Sustenance */
-    /* test('it returns the correct list of base materials for Recipes.Fabricator.Sustenance', () => {
-        expect(algo.listOfMaterials('Filtered_Water')).toEqual([{ c: 'Bladderfish', q: 1 }]);
-        expect(algo.listOfMaterials('Disinfected_Water')).toEqual([{ c: 'Salt_Deposit', q: 0.5 }, { c: 'Coral_Tube_Sample', q: 0.5 }]);
-    }); */
+    /* Recipes.Fabricator.Sustenance.Water */
+    test('it returns the correct list of base materials for Recipes.Fabricator.Sustenance.Water', () => {
+        expect(algo.listOfMaterials('Water_Purification_Tablet')).toEqual([{ c: 'Frost_Vase_Plant', q: 1 }, { c: 'Salt_Deposit', q: 1 }]);
+    });
 
     /* Recipes.Fabricator.Deployables */
-    /* test('it returns the correct list of base materials for Recipes.Fabricator.Deployables', () => {
+    test('it returns the correct list of base materials for Recipes.Fabricator.Deployables', () => {
         expect(algo.listOfMaterials('Beacon')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Titanium', q: 1 }]);
-        expect(algo.listOfMaterials('Gravsphere')).toEqual([{ c: 'Copper_Ore', q: 2 }, { c: 'Titanium', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
-    }); */
+        expect(algo.listOfMaterials('Grav_Trap')).toEqual([{ c: 'Copper_Ore', q: 2 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Mobile_Vehicle_Bay')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Quantum_Locker')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Ion_Cube', q: 1 }]);
+        expect(algo.listOfMaterials('Seaglide')).toEqual([{ c: 'Copper_Ore', q: 3 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Spy_Pengling')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Silver_Ore', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
+        expect(algo.listOfMaterials('Spy_Pengling_Remote')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Copper_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Snowfox_Hop_Module')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Silver_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Snowfox_Ice_Worm_Attack_Reduction_Module')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Silver_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Waterproof_Locker')).toEqual([{ c: 'Titanium', q: 4 }]);
+    });
 
     /* Recipes.Fabricator.Personal.Equipment */
     /* test('it returns the correct list of base materials for Recipes.Fabricator.Personal.Equipment', () => {
@@ -97,4 +104,5 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('High_Capacity_O₂_Tank')).toEqual([{ c: 'Titanium', q: 6 }, { c: 'Creepvine_Sample', q: 2 }, { c: 'Quartz', q: 4 }, { c: 'Silver_Ore', q: 1 }]);
         expect(algo.listOfMaterials('Fins')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }]);
     }); */
+    /* Recipes.Fabricator.Personal.Tools */
 });

@@ -238,14 +238,66 @@ export default {
             { c: 'Titanium', q: 1 },
         ],
     },
-    Gravsphere: {
+    Grav_Trap: {
         t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Battery', q: 1 },
             { c: 'Copper_Ore', q: 1 },
             { c: 'Titanium', q: 1 },
+        ],
+    },
+    Mobile_Vehicle_Bay: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Lubricant', q: 1 },
+            { c: 'Computer_Chip', q: 1 },
+        ],
+    },
+    Quantum_Locker: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Ion_Cube', q: 1 },
+        ],
+    },
+    Seaglide: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Lubricant', q: 1 },
+            { c: 'Copper_Wire', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Spy_Pengling: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Silicone_Rubber', q: 1 },
             { c: 'Battery', q: 1 },
         ],
     },
-    // TODO: remaining Deployables
+    Spy_Pengling_Remote: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Copper_Wire', q: 1 },
+        ],
+    },
+    Snowfox_Hop_Module: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    Snowfox_Ice_Worm_Attack_Reduction_Module: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    Waterproof_Locker: {
+        t: 'Recipes.Fabricator.Deployables', m: [
+            { c: 'Titanium', q: 4 },
+        ],
+    },
 
     // ============= Recipes.Fabricator.Sustenance.Personal.Equipment
     'Standard_O₂_Tank': { // TODO: Figure out if non-ASCII subscript works for linking & stuff
