@@ -53,20 +53,13 @@ export default {
     Silicone_Rubber: {
         t: 'Recipes.Fabricator.Basic_Materials',
         m: [
-            { c: 'Creepvine_Seed_Cluster', q: 0.5 }, // TODO: figure out a way to indicate that 2 Silicone Rubber are produced from 1 component
+            { c: 'Creepvine_Seed_Cluster', q: 1 },
         ],
     },
     Glass: {
         t: 'Recipes.Fabricator.Basic_Materials',
         m: [
             { c: 'Quartz', q: 2 },
-        ],
-    },
-    Bleach: {
-        t: 'Recipes.Fabricator.Basic_Materials',
-        m: [
-            { c: 'Salt_Deposit', q: 1 },
-            { c: 'Coral_Tube_Sample', q: 1 },
         ],
     },
     Lubricant: {
@@ -95,21 +88,22 @@ export default {
     Hydrochloric_Acid: {
         t: 'Recipes.Fabricator.Advanced_Materials',
         m: [
-            { c: 'Deep_Shroom', q: 3 },
+            { c: 'Young_Cotton_Anemone', q: 3 },
             { c: 'Salt_Deposit', q: 1 },
         ],
     },
     Benzene: {
         t: 'Recipes.Fabricator.Advanced_Materials',
         m: [
-            { c: 'Blood_Oil', q: 3 },
+            { c: 'Flowering_Spore', q: 2 },
+            { c: 'Ribbon_Plant', q: 1 },
         ],
     },
     Synthetic_Fibers: {
         t: 'Recipes.Fabricator.Advanced_Materials',
         m: [
-            { c: 'Benzene', q: 1 },
-            { c: 'Fiber_Mesh', q: 1 },
+            { c: 'Ruby', q: 1 },
+            { c: 'Spiral_Plant_Clipping', q: 1 },
         ],
     },
     Aerogel: {
@@ -126,12 +120,21 @@ export default {
             { c: 'Hydrochloric_Acid', q: 1 },
         ],
     },
+    Hydraulic_Fluid: {
+        t: 'Recipes.Fabricator.Advanced_Materials',
+        m: [
+            { c: 'Creepvine_Seed_Cluster', q: 1 },
+            { c: 'Gel_Sack', q: 4 },
+        ],
+    },
 
     // ============= Recipes.Fabricator.Electronics
-    Copper_Wire: {
+    Advanced_Wiring_Kit: {
         t: 'Recipes.Fabricator.Electronics',
         m: [
-            { c: 'Copper_Ore', q: 2 },
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Gold', q: 2 },
+            { c: 'Computer_Chip', q: 1 },
         ],
     },
     Battery: {
@@ -139,13 +142,6 @@ export default {
         m: [
             { c: 'Copper_Ore', q: 1 },
             { c: 'Ribbon_Plant', q: 2 },
-        ],
-    },
-    Power_Cell: {
-        t: 'Recipes.Fabricator.Electronics',
-        m: [
-            { c: 'Battery', q: 2 },
-            { c: 'Silicone_Rubber', q: 1 },
         ],
     },
     Computer_Chip: {
@@ -156,27 +152,10 @@ export default {
             { c: 'Copper_Wire', q: 1 },
         ],
     },
-    Wiring_Kit: {
+    Copper_Wire: {
         t: 'Recipes.Fabricator.Electronics',
         m: [
-            { c: 'Silver_Ore', q: 2 },
-        ],
-    },
-    Advanced_Wiring_Kit: {
-        t: 'Recipes.Fabricator.Electronics',
-        m: [
-            { c: 'Wiring_Kit', q: 1 },
-            { c: 'Gold', q: 2 },
-            { c: 'Computer_Chip', q: 1 },
-        ],
-    },
-    Reactor_Rod: {
-        t: 'Recipes.Fabricator.Electronics',
-        m: [
-            { c: 'Uraninite_Crystal', q: 3 },
-            { c: 'Lead', q: 1 },
-            { c: 'Titanium', q: 1 },
-            { c: 'Glass', q: 1 },
+            { c: 'Copper_Ore', q: 2 },
         ],
     },
     Ion_Battery: {
@@ -185,6 +164,7 @@ export default {
             { c: 'Ion_Cube', q: 1 },
             { c: 'Gold', q: 1 },
             { c: 'Silver_Ore', q: 1 },
+            { c: 'Lithium', q: 1 },
         ],
     },
     Ion_Power_Cell: {
@@ -192,6 +172,46 @@ export default {
         m: [
             { c: 'Ion_Battery', q: 2 },
             { c: 'Silicone_Rubber', q: 1 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    Parallel_Processing_Unit: {
+        t: 'Recipes.Fabricator.Electronics',
+        m: [
+            { c: 'Gold', q: 1 },
+            { c: 'Silver_Ore', q: 1 },
+            { c: 'Table_Coral_Sample', q: 1 },
+        ],
+    },
+    Power_Cell: {
+        t: 'Recipes.Fabricator.Electronics',
+        m: [
+            { c: 'Battery', q: 2 },
+            { c: 'Silicone_Rubber', q: 1 },
+        ],
+    },
+    Reactor_Rod: {
+        t: 'Recipes.Fabricator.Electronics',
+        m: [
+            { c: 'Uraninite_Crystal', q: 2 },
+            { c: 'Lead', q: 1 },
+            { c: 'Titanium', q: 1 },
+            { c: 'Glass', q: 1 },
+        ],
+    },
+    Test_Override_Module: {
+        t: 'Recipes.Fabricator.Electronics',
+        m: [
+            { c: 'Parallel_Processing_Unit', q: 1 },
+            { c: 'Titanium', q: 1 },
+            { c: 'Lead', q: 1 },
+            { c: 'Copper_Wire', q: 1 },
+        ],
+    },
+    Wiring_Kit: {
+        t: 'Recipes.Fabricator.Electronics',
+        m: [
+            { c: 'Silver_Ore', q: 2 },
         ],
     },
 

@@ -44,35 +44,40 @@ describe('Test recipes', () => {
     });
 
     /* Recipes.Fabricator.Basic_Materials */
-    /* test('it returns the correct list of base materials for Recipes.Fabricator.Basic_Materials', () => {
+    test('it returns the correct list of base materials for Recipes.Fabricator.Basic_Materials', () => {
         expect(algo.listOfMaterials('Titanium_Ingot')).toEqual([{ c: 'Titanium', q: 10 }]);
         expect(algo.listOfMaterials('Fiber_Mesh')).toEqual([{ c: 'Creepvine_Sample', q: 2 }]);
-        expect(algo.listOfMaterials('Silicone_Rubber')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 0.5 }]);
+        expect(algo.listOfMaterials('Silicone_Rubber')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }]);
         expect(algo.listOfMaterials('Glass')).toEqual([{ c: 'Quartz', q: 2 }]);
-        expect(algo.listOfMaterials('Bleach')).toEqual([{ c: 'Salt_Deposit', q: 1 }, { c: 'Coral_Tube_Sample', q: 1 }]);
         expect(algo.listOfMaterials('Lubricant')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }]);
         expect(algo.listOfMaterials('Enameled_Glass')).toEqual([{ c: 'Quartz', q: 2 }, { c: 'Diamond', q: 1 }, { c: 'Lead', q: 1 }]);
         expect(algo.listOfMaterials('Plasteel_Ingot')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Lithium', q: 2 }]);
-    }); */
+    });
 
     /* Recipes.Fabricator.Advanced_Materials */
-    /* test('it returns the correct list of base materials for Recipes.Fabricator.Advanced_Materials', () => {
-        expect(algo.listOfMaterials('Hydrochloric_Acid')).toEqual([{ c: 'Deep_Shroom', q: 3 }, { c: 'Salt_Deposit', q: 1 }]);
-        expect(algo.listOfMaterials('Benzene')).toEqual([{ c: 'Blood_Oil', q: 3 }]);
-        expect(algo.listOfMaterials('Synthetic_Fibers')).toEqual([{ c: 'Blood_Oil', q: 3 }, { c: 'Creepvine_Sample', q: 2 }]);
+    test('it returns the correct list of base materials for Recipes.Fabricator.Advanced_Materials', () => {
+        expect(algo.listOfMaterials('Hydrochloric_Acid')).toEqual([{ c: 'Young_Cotton_Anemone', q: 3 }, { c: 'Salt_Deposit', q: 1 }]);
+        expect(algo.listOfMaterials('Benzene')).toEqual([{ c: 'Flowering_Spore', q: 2 }, { c: 'Ribbon_Plant', q: 1 }]);
+        expect(algo.listOfMaterials('Synthetic_Fibers')).toEqual([{ c: 'Ruby', q: 1 }, { c: 'Spiral_Plant_Clipping', q: 1 }]);
         expect(algo.listOfMaterials('Aerogel')).toEqual([{ c: 'Gel_Sack', q: 1 }, { c: 'Ruby', q: 1 }]);
-        // expect(algo.listOfMaterials('Polyaniline')).toEqual([{ c: 'Gold', q: 1 }, { c: 'Deep_Shroom', q: 3 }, { c: 'Salt_Deposit', q: 1 }]);
-    }); */
+        expect(algo.listOfMaterials('Polyaniline')).toEqual([{ c: 'Gold', q: 1 }, { c: 'Young_Cotton_Anemone', q: 3 }, { c: 'Salt_Deposit', q: 1 }]);
+        expect(algo.listOfMaterials('Hydraulic_Fluid')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Gel_Sack', q: 4 }]);
+    });
 
     /* Recipes.Fabricator.Electronics */
-    /* test('it returns the correct list of base materials for Recipes.Fabricator.Electronics', () => {
-        expect(algo.listOfMaterials('Copper_Wire')).toEqual([{ c: 'Copper_Ore', q: 2 }]);
-        expect(algo.listOfMaterials('Battery')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
+    test('it returns the correct list of base materials for Recipes.Fabricator.Electronics', () => {
         expect(algo.listOfMaterials('Advanced_Wiring_Kit')).toEqual([{ c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }]);
-        expect(algo.listOfMaterials('Reactor_Rod')).toEqual([{ c: 'Uraninite_Crystal', q: 3 }, { c: 'Lead', q: 1 }, { c: 'Titanium', q: 1 }, { c: 'Quartz', q: 2 }]);
-        expect(algo.listOfMaterials('Ion_Battery')).toEqual([{ c: 'Ion_Cube', q: 1 }, { c: 'Gold', q: 1 }, { c: 'Silver_Ore', q: 1 }]);
-        expect(algo.listOfMaterials('Ion_Power_Cell')).toEqual([{ c: 'Ion_Cube', q: 2 }, { c: 'Gold', q: 2 }, { c: 'Silver_Ore', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 0.5 }]);
-    }); */
+        expect(algo.listOfMaterials('Battery')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
+        expect(algo.listOfMaterials('Computer_Chip')).toEqual([{ c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Copper_Wire')).toEqual([{ c: 'Copper_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Ion_Battery')).toEqual([{ c: 'Ion_Cube', q: 1 }, { c: 'Gold', q: 1 }, { c: 'Silver_Ore', q: 1 }, { c: 'Lithium', q: 1 }]);
+        expect(algo.listOfMaterials('Ion_Power_Cell')).toEqual([{ c: 'Ion_Cube', q: 2 }, { c: 'Gold', q: 2 }, { c: 'Silver_Ore', q: 4 }, { c: 'Lithium', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }]);
+        expect(algo.listOfMaterials('Parallel_Processing_Unit')).toEqual([{ c: 'Gold', q: 1 }, { c: 'Silver_Ore', q: 1 }, { c: 'Table_Coral_Sample', q: 1 }]);
+        expect(algo.listOfMaterials('Power_Cell')).toEqual([{ c: 'Copper_Ore', q: 2 }, { c: 'Ribbon_Plant', q: 4 }, { c: 'Creepvine_Seed_Cluster', q: 1 }]);
+        expect(algo.listOfMaterials('Reactor_Rod')).toEqual([{ c: 'Uraninite_Crystal', q: 2 }, { c: 'Lead', q: 1 }, { c: 'Titanium', q: 1 }, { c: 'Quartz', q: 2 }]);
+        expect(algo.listOfMaterials('Test_Override_Module')).toEqual([{ c: 'Gold', q: 1 }, { c: 'Silver_Ore', q: 1 }, { c: 'Table_Coral_Sample', q: 1 }, { c: 'Titanium', q: 1 }, { c: 'Lead', q: 1 }, { c: 'Copper_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Wiring_Kit')).toEqual([{ c: 'Silver_Ore', q: 2 }]);
+    });
 
     /* Recipes.Fabricator.Sustenance */
     /* test('it returns the correct list of base materials for Recipes.Fabricator.Sustenance', () => {
