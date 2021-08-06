@@ -215,24 +215,19 @@ export default {
         ],
     },
 
-    // ============= Recipes.Fabricator.Sustenance
-    Filtered_Water: {
+    // ============= Recipes.Fabricator.Sustenance.Water
+    Water_Purification_Tablet: {
         t: 'Recipes.Fabricator.Sustenance',
         m: [
-            { c: 'Bladderfish', q: 1 },
-        ],
-    },
-    Disinfected_Water: {
-        t: 'Recipes.Fabricator.Sustenance',
-        m: [
-            { c: 'Bleach', q: 0.5 }, // TODO: figure out a way to indicate that 2 Disinfected Water are produced from 1 component
+            { c: 'Frost_Vase_Plant', q: 1 },
+            { c: 'Salt_Deposit', q: 1 },
         ],
     },
 
-    // ============= Recipes.Fabricator.Cooked_Food
+    // ============= Recipes.Fabricator.Sustenance.Cooked_Food
     // TODO
 
-    // ============= Recipes.Fabricator.Cured_Food
+    // ============= Recipes.Fabricator.Sustenance.Cured_Food
     // TODO
 
     // ============= Recipes.Fabricator.Deployables
@@ -244,8 +239,7 @@ export default {
         ],
     },
     Gravsphere: {
-        t: 'Recipes.Fabricator.Deployables',
-        m: [
+        t: 'Recipes.Fabricator.Deployables', m: [
             { c: 'Copper_Ore', q: 1 },
             { c: 'Titanium', q: 1 },
             { c: 'Battery', q: 1 },
@@ -253,9 +247,9 @@ export default {
     },
     // TODO: remaining Deployables
 
-    // ============= Recipes.Fabricator.Personal.Equipment
+    // ============= Recipes.Fabricator.Sustenance.Personal.Equipment
     'Standard_O₂_Tank': { // TODO: Figure out if non-ASCII subscript works for linking & stuff
-        t: 'Recipes.Fabricator.Personal.Equipment',
+        t: 'Recipes.Fabricator.Sustenance.Personal.Equipment',
         m: [
             { c: 'Titanium', q: 2 },
             { c: 'Fiber_Mesh', q: 1 },
@@ -282,6 +276,8 @@ export default {
         ],
     },
     // TODO: remaining Personal.Equipment
+
+    // TODO: Personal.Tools
 
     // ============= Recipes.Habitat_Builder
     Scanner_Room: {
