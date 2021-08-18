@@ -421,7 +421,122 @@ export default {
         ],
     },
 
-    // TODO: Personal.Tools
+    // ============= Recipes.Fabricator.Personal.Tools
+    'Air_Bladder': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Silicone_Rubber', q: 1 },
+            { c: 'Bladderfish', q: 1 },
+        ],
+    },
+    'Flare': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Crystalline_Sulfur', q: 1 },
+        ],
+    },
+    'Flashlight': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Glass', q: 1 },
+        ],
+    },
+    'Habitat_Builder': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Battery', q: 1 },
+        ],
+    },
+    'Laser_Cutter': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Diamond', q: 1 },
+            { c: 'Battery', q: 1 },
+            { c: 'Titanium', q: 1 },
+            { c: 'Crystalline_Sulfur', q: 1 },
+        ],
+    },
+    'Light_Stick': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Titanium', q: 1 },
+            { c: 'Glass', q: 1 },
+        ],
+    },
+    'Mineral_Detector': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Titanium', q: 1 },
+            { c: 'Copper_Wire', q: 1 },
+            { c: 'Silicone_Rubber', q: 1 },
+        ],
+    },
+    'Pathfinder_Tool': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Creepvine_Seed_Cluster', q: 1 },
+            { c: 'Titanium', q: 1 },
+            { c: 'Battery', q: 1 },
+        ],
+    },
+    'Propulsion_Cannon': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Battery', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    'Repair_Tool': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Silicone_Rubber', q: 1 },
+            { c: 'Crystalline_Sulfur', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    'Scanner': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    'Survival_Knife': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Silicone_Rubber', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    'Tether_Tool': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Silicone_Rubber', q: 1 },
+            { c: 'Ion_Cube', q: 1 },
+        ],
+    },
+    'Thermoblade': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Survival_Knife', q: 1 },
+            { c: 'Battery', q: 1 },
+        ],
+    },
+    'Thumper': {
+        t: 'Recipes.Fabricator.Personal.Tools',
+        m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Magnetite', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
 
     // ============= Recipes.Habitat_Builder
     Scanner_Room: {

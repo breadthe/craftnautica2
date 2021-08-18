@@ -119,5 +119,21 @@ describe('Test recipes', () => {
     });
 
     /* Recipes.Fabricator.Personal.Tools */
-    // @todo
+    test('it returns the correct list of base materials for Recipes.Fabricator.Personal.Tools', () => {
+        expect(algo.listOfMaterials('Air_Bladder')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Bladderfish', q: 1 }]);
+        expect(algo.listOfMaterials('Flare')).toEqual([{ c: 'Crystalline_Sulfur', q: 1 }]);
+        expect(algo.listOfMaterials('Flashlight')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Quartz', q: 2 }]);
+        expect(algo.listOfMaterials('Habitat_Builder')).toEqual([{ c: 'Silver_Ore', q: 2 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 3 }, { c: 'Ribbon_Plant', q: 2 }]);
+        expect(algo.listOfMaterials('Laser_Cutter')).toEqual([{ c: 'Diamond', q: 1 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Titanium', q: 1 }, { c: 'Crystalline_Sulfur', q: 1 }]);
+        expect(algo.listOfMaterials('Light_Stick')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Titanium', q: 1 }, { c: 'Quartz', q: 2 }]);
+        expect(algo.listOfMaterials('Mineral_Detector')).toEqual([{ c: 'Copper_Ore', q: 3 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Titanium', q: 1 }, { c: 'Creepvine_Seed_Cluster', q: 1 }]);
+        expect(algo.listOfMaterials('Pathfinder_Tool')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
+        expect(algo.listOfMaterials('Propulsion_Cannon')).toEqual([{ c: 'Silver_Ore', q: 2 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Repair_Tool')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Crystalline_Sulfur', q: 1 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Scanner')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Survival_Knife')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Tether_Tool')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Ion_Cube', q: 1 }]);
+        expect(algo.listOfMaterials('Thermoblade')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
+        expect(algo.listOfMaterials('Thumper')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Magnetite', q: 1 }, { c: 'Titanium', q: 1 }]);
+    });
 });
