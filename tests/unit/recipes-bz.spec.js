@@ -136,4 +136,50 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Thermoblade')).toEqual([{ c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }]);
         expect(algo.listOfMaterials('Thumper')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Magnetite', q: 1 }, { c: 'Titanium', q: 1 }]);
     });
+
+    /* Recipes.Habitat_Builder.??? */
+    // test('it returns the correct list of base materials for Recipes.Habitat_Builder.???', () => {
+    // expect(algo.listOfMaterials('Scanner_Room')).toEqual([]);
+    // expect(algo.listOfMaterials('Solar_Panel')).toEqual([]);
+    // expect(algo.listOfMaterials('Radio')).toEqual([]);
+    // });
+
+    /* Recipes.Habitat_Builder.Base_Pieces */
+    test('it returns the correct list of base materials for Recipes.Habitat_Builder.Base_Pieces', () => {
+        expect(algo.listOfMaterials('I_Glass_Compartment')).toEqual([{ c: 'Quartz', q: 4 }]);
+        expect(algo.listOfMaterials('Control_Room')).toEqual([{ c: 'Titanium', q: 4 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Quartz', q: 2 }]);
+        expect(algo.listOfMaterials('Large_Room')).toEqual([{ c: 'Titanium', q: 20 }, { c: 'Lithium', q: 4 }]);
+        expect(algo.listOfMaterials('Multipurpose_Room_Glass_Dome')).toEqual([{ c: 'Quartz', q: 4 }, { c: 'Diamond', q: 2 }, { c: 'Lead', q: 2 }, { c: 'Titanium', q: 2 }, { c: 'Lithium', q: 1 }]);
+        expect(algo.listOfMaterials('Large_Room_Glass_Dome')).toEqual([{ c: 'Quartz', q: 8 }, { c: 'Diamond', q: 4 }, { c: 'Lead', q: 4 }, { c: 'Titanium', q: 4 }, { c: 'Lithium', q: 2 }]);
+    });
+
+    /* Recipes.Habitat_Builder.Exterior_Modules */
+    test('it returns the correct list of base materials for Recipes.Habitat_Builder.Exterior_Modules', () => {
+        expect(algo.listOfMaterials('Snowfox_Hoverpad')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Silver_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Spotlight')).toEqual([{ c: 'Quartz', q: 2 }, { c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Base-attached_Air_Pump')).toEqual([{ c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Snowman')).toEqual([{ c: 'Snowball', q: 3 }, { c: 'Titanium', q: 6 }, { c: 'Creepvine_Sample', q: 4 }, { c: 'Quartz', q: 4 }, { c: 'Silver_Ore', q: 3 }, { c: 'Creepvine_Seed_Cluster', q: 1 }]);
+    });
+
+    /* Recipes.Habitat_Builder.Interior_Pieces */
+    test('it returns the correct list of base materials for Recipes.Habitat_Builder.Interior_Pieces', () => {
+        expect(algo.listOfMaterials('Large_Room_Partition')).toEqual([{ c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Large_Room_Partition_Door')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Quartz', q: 1 }]);
+    });
+
+    /* Recipes.Habitat_Builder.Interior_Modules */
+    test('it returns the correct list of base materials for Recipes.Habitat_Builder.Interior_Modules', () => {
+        expect(algo.listOfMaterials('Jukebox')).toEqual([{ c: 'Quartz', q: 1 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Jukebox_Speaker')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Copper_Ore', q: 1 }]);
+        expect(algo.listOfMaterials('Basic_Plant_Pot')).toEqual([{ c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Composite_Plant_Pot')).toEqual([{ c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Chic_Plant_Pot')).toEqual([{ c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Indoor_Growbed')).toEqual([{ c: 'Titanium', q: 4 }]);
+        expect(algo.listOfMaterials('Recyclotron')).toEqual([{ c: 'Ion_Cube', q: 1 }, { c: 'Titanium', q: 10 }]);
+    });
+
+    /* Recipes.Habitat_Builder.Miscellaneous */
+    test('it returns the correct list of base materials for Recipes.Habitat_Builder.Miscellaneous', () => {
+        // TODO
+    });
 });

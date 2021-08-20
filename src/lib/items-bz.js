@@ -539,7 +539,7 @@ export default {
     },
 
     // ============= Recipes.Habitat_Builder
-    Scanner_Room: {
+    /* Scanner_Room: {
         t: 'Recipes.Habitat_Builder',
         m: [
             { c: 'Copper_Ore', q: 2 },
@@ -547,22 +547,155 @@ export default {
             { c: 'Table_Coral_Sample', q: 1 },
             { c: 'Titanium', q: 5 },
         ],
-    },
-    Solar_Panel: {
+    }, */
+    /* Solar_Panel: {
         t: 'Recipes.Habitat_Builder',
         m: [
             { c: 'Quartz', q: 2 },
             { c: 'Copper_Ore', q: 1 },
             { c: 'Titanium', q: 2 },
         ],
-    },
-    Radio: {
+    }, */
+    /* Radio: {
         t: 'Recipes.Habitat_Builder',
         m: [
             { c: 'Copper_Ore', q: 1 },
             { c: 'Titanium', q: 1 },
         ],
+    }, */
+
+    // ============= Recipes.Habitat_Builder.Base_Pieces
+    I_Glass_Compartment: {
+        t: 'Recipes.Habitat_Builder.Base_Pieces',
+        m: [
+            { c: 'Glass', q: 2 },
+        ],
     },
+    Control_Room: {
+        t: 'Recipes.Habitat_Builder.Base_Pieces',
+        m: [
+            { c: 'Titanium', q: 4 },
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Glass', q: 1 },
+        ],
+    },
+    Large_Room: {
+        t: 'Recipes.Habitat_Builder.Base_Pieces',
+        m: [
+            { c: 'Plasteel_Ingot', q: 2 },
+        ],
+    },
+    Multipurpose_Room_Glass_Dome: {
+        t: 'Recipes.Habitat_Builder.Base_Pieces',
+        m: [
+            { c: 'Enameled_Glass', q: 2 },
+            { c: 'Titanium', q: 2 },
+            { c: 'Lithium', q: 1 },
+        ],
+    },
+    Large_Room_Glass_Dome: {
+        t: 'Recipes.Habitat_Builder.Base_Pieces',
+        m: [
+            { c: 'Enameled_Glass', q: 4 },
+            { c: 'Titanium', q: 4 },
+            { c: 'Lithium', q: 2 },
+        ],
+    },
+
+    // ============= Recipes.Habitat_Builder.Exterior_Modules
+    Snowfox_Hoverpad: {
+        t: 'Recipes.Habitat_Builder.Exterior_Modules',
+        m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    Spotlight: {
+        t: 'Recipes.Habitat_Builder.Exterior_Modules',
+        m: [
+            { c: 'Glass', q: 1 },
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    "Base-attached_Air_Pump": {
+        t: 'Recipes.Habitat_Builder.Exterior_Modules',
+        m: [
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    Snowman: {
+        t: 'Recipes.Habitat_Builder.Exterior_Modules',
+        m: [
+            { c: 'Snowball', q: 3 },
+            { c: 'High_Capacity_O₂_Tank', q: 1 },
+            { c: 'Rebreather', q: 1 },
+        ],
+    },
+
+    // ============= Recipes.Habitat_Builder.Interior_Pieces
+    Large_Room_Partition: {
+        t: 'Recipes.Habitat_Builder.Interior_Pieces',
+        m: [
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Large_Room_Partition_Door: {
+        t: 'Recipes.Habitat_Builder.Interior_Pieces',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Quartz', q: 1 },
+        ],
+    },
+
+    // ============= Recipes.Habitat_Builder.Interior_Modules
+    Jukebox: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Quartz', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Jukebox_Speaker: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Copper_Ore', q: 1 },
+        ],
+    },
+    Basic_Plant_Pot: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    Composite_Plant_Pot: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    Chic_Plant_Pot: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    Indoor_Growbed: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Titanium', q: 4 },
+        ],
+    },
+    Recyclotron: {
+        t: 'Recipes.Habitat_Builder.Interior_Modules',
+        m: [
+            { c: 'Ion_Cube', q: 1 },
+            { c: 'Titanium_Ingot', q: 1 },
+        ],
+    },
+
+    // ============= Recipes.Habitat_Builder.Miscellaneous
+    // TODO
 
     // ============= Recipes.Scanner_Room
     Scanner_Room_Range_Upgrade: {
