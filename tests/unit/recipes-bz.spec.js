@@ -180,6 +180,26 @@ describe('Test recipes', () => {
 
     /* Recipes.Habitat_Builder.Miscellaneous */
     test('it returns the correct list of base materials for Recipes.Habitat_Builder.Miscellaneous', () => {
-        // TODO
+        expect(algo.listOfMaterials('Basic_Double_Bed')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Quilted_Double_Bed')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Single_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Jeremiah\'s_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Sam\'s_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Zeta\'s_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Danielle\'s_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Emmanuel\'s_Bed')).toEqual([{ c: 'Titanium', q: 2 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Fred\'s_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Parvan\'s_Bed')).toEqual([{ c: 'Titanium', q: 1 }, { c: 'Creepvine_Sample', q: 2 }]);
+        expect(algo.listOfMaterials('Executive_Desk')).toEqual([{ c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Swivel_Chair')).toEqual([{ c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Office_Chair')).toEqual([{ c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Command_Chair')).toEqual([{ c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Fridge')).toEqual([{ c: 'Quartz', q: 2 }, { c: 'Titanium', q: 2 }]);
+        expect(algo.listOfMaterials('Shower')).toEqual([{ c: 'Titanium', q: 3 }]);
+        expect(algo.listOfMaterials('Sink')).toEqual([{ c: 'Titanium', q: 3 }]);
+        expect(algo.listOfMaterials('Small_Stove')).toEqual([{ c: 'Copper_Ore', q: 2 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Toilet')).toEqual([{ c: 'Titanium', q: 3 }]);
+        expect(algo.listOfMaterials('Aromatherapy_Lamp')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Young_Cotton_Anemone', q: 1 }]);
+        expect(algo.listOfMaterials('Executive_Toy')).toEqual([{ c: 'Magnetite', q: 1 }, { c: 'Titanium', q: 1 }]);
     });
 });

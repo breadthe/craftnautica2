@@ -695,7 +695,149 @@ export default {
     },
 
     // ============= Recipes.Habitat_Builder.Miscellaneous
-    // TODO
+    Basic_Double_Bed: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    Quilted_Double_Bed: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    Single_Bed: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Jeremiah's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Sam's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Zeta's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Danielle's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Emmanuel's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 2 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Fred's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    "Parvan's_Bed": {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+            { c: 'Fiber_Mesh', q: 1 },
+        ],
+    },
+    Executive_Desk: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Swivel_Chair: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Office_Chair: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Command_Chair: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Fridge: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Glass', q: 1 },
+            { c: 'Titanium', q: 2 },
+        ],
+    },
+    Shower: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Pipe', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Sink: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Pipe', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Small_Stove: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Copper_Wire', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Toilet: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Pipe', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
+    Aromatherapy_Lamp: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Battery', q: 1 },
+            { c: 'Young_Cotton_Anemone', q: 1 },
+        ],
+    },
+    Executive_Toy: {
+        t: 'Recipes.Habitat_Builder.Miscellaneous',
+        m: [
+            { c: 'Magnetite', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
 
     // ============= Recipes.Scanner_Room
     Scanner_Room_Range_Upgrade: {
