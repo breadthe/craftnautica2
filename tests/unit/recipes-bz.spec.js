@@ -139,13 +139,13 @@ describe('Test recipes', () => {
 
     /* Recipes.Habitat_Builder.??? */
     // test('it returns the correct list of base materials for Recipes.Habitat_Builder.???', () => {
-    // expect(algo.listOfMaterials('Scanner_Room')).toEqual([]);
     // expect(algo.listOfMaterials('Solar_Panel')).toEqual([]);
     // expect(algo.listOfMaterials('Radio')).toEqual([]);
     // });
 
     /* Recipes.Habitat_Builder.Base_Pieces */
     test('it returns the correct list of base materials for Recipes.Habitat_Builder.Base_Pieces', () => {
+        expect(algo.listOfMaterials('Scanner_Room')).toEqual([{ c: 'Titanium', q: 5 }, { c: 'Copper_Ore', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Table_Coral_Sample', q: 1 }]);
         expect(algo.listOfMaterials('I_Glass_Compartment')).toEqual([{ c: 'Quartz', q: 4 }]);
         expect(algo.listOfMaterials('Control_Room')).toEqual([{ c: 'Titanium', q: 4 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Quartz', q: 2 }]);
         expect(algo.listOfMaterials('Large_Room')).toEqual([{ c: 'Titanium', q: 20 }, { c: 'Lithium', q: 4 }]);
@@ -201,5 +201,13 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Toilet')).toEqual([{ c: 'Titanium', q: 3 }]);
         expect(algo.listOfMaterials('Aromatherapy_Lamp')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Young_Cotton_Anemone', q: 1 }]);
         expect(algo.listOfMaterials('Executive_Toy')).toEqual([{ c: 'Magnetite', q: 1 }, { c: 'Titanium', q: 1 }]);
+    });
+
+    /* Recipes.Scanner_Room */
+    test('it returns the correct list of base materials for Recipes.Scanner_Room', () => {
+        expect(algo.listOfMaterials('Scanner_Room_HUD_Chip')).toEqual([{ c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 2 }, { c: 'Magnetite', q: 1 }]);
+        expect(algo.listOfMaterials('Camera_Drone')).toEqual([{ c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 3 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Quartz', q: 2 }, { c: 'Titanium', q: 1 }]);
+        expect(algo.listOfMaterials('Scanner_Room_Range_Upgrade')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Magnetite', q: 1 }]);
+        expect(algo.listOfMaterials('Scanner_Room_Speed_Upgrade')).toEqual([{ c: 'Silver_Ore', q: 1 }, { c: 'Gold', q: 1 }]);
     });
 });

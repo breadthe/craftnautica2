@@ -539,15 +539,15 @@ export default {
     },
 
     // ============= Recipes.Habitat_Builder
-    /* Scanner_Room: {
+    Scanner_Room: {
         t: 'Recipes.Habitat_Builder',
         m: [
+            { c: 'Titanium', q: 5 },
             { c: 'Copper_Ore', q: 2 },
             { c: 'Gold', q: 1 },
             { c: 'Table_Coral_Sample', q: 1 },
-            { c: 'Titanium', q: 5 },
         ],
-    }, */
+    },
     /* Solar_Panel: {
         t: 'Recipes.Habitat_Builder',
         m: [
@@ -840,11 +840,34 @@ export default {
     },
 
     // ============= Recipes.Scanner_Room
+    Scanner_Room_HUD_Chip: {
+        t: 'Recipes.Scanner_Room',
+        m: [
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Magnetite', q: 1 },
+        ],
+    },
+    Camera_Drone: {
+        t: 'Recipes.Scanner_Room',
+        m: [
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Battery', q: 1 },
+            { c: 'Glass', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
     Scanner_Room_Range_Upgrade: {
         t: 'Recipes.Scanner_Room',
         m: [
             { c: 'Copper_Ore', q: 1 },
             { c: 'Magnetite', q: 1 },
+        ],
+    },
+    Scanner_Room_Speed_Upgrade: {
+        t: 'Recipes.Scanner_Room',
+        m: [
+            { c: 'Silver_Ore', q: 1 },
+            { c: 'Gold', q: 1 },
         ],
     },
 };
