@@ -210,4 +210,15 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Scanner_Room_Range_Upgrade')).toEqual([{ c: 'Copper_Ore', q: 1 }, { c: 'Magnetite', q: 1 }]);
         expect(algo.listOfMaterials('Scanner_Room_Speed_Upgrade')).toEqual([{ c: 'Silver_Ore', q: 1 }, { c: 'Gold', q: 1 }]);
     });
+
+    /* Recipes.Mobile_Vehicle_Bay */
+    test('it returns the correct list of base materials for Recipes.Mobile_Vehicle_Bay', () => {
+        expect(algo.listOfMaterials('Seatruck')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 4 }, { c: 'Quartz', q: 4 }, { c: 'Ribbon_Plant', q: 4 }, { c: 'Creepvine_Seed_Cluster', q: 1 }]);
+        expect(algo.listOfMaterials('Seatruck_Aquarium_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 4 }, { c: 'Quartz', q: 4 }, { c: 'Diamond', q: 2 }, { c: 'Lead', q: 2 }]);
+        expect(algo.listOfMaterials('Seatruck_Docking_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Lead', q: 3 }]);
+        expect(algo.listOfMaterials('Seatruck_Fabricator_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 2 }, { c: 'Lead', q: 3 }]);
+        expect(algo.listOfMaterials('Seatruck_Sleeper_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Creepvine_Sample', q: 4 }, { c: 'Lead', q: 3 }]);
+        expect(algo.listOfMaterials('Seatruck_Storage_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 2 }, { c: 'Lead', q: 3 }]);
+        expect(algo.listOfMaterials('Seatruck_Teleportation_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Gel_Sack', q: 2 }, { c: 'Ruby', q: 2 }]);
+    });
 });

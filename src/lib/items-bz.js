@@ -870,4 +870,63 @@ export default {
             { c: 'Gold', q: 1 },
         ],
     },
+
+    // ============= Recipes.Mobile_Vehicle_Bay
+    Seatruck: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Glass', q: 2 },
+            { c: 'Power_Cell', q: 1 },
+        ],
+    },
+    Seatruck_Aquarium_Module: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Wiring_Kit', q: 2 },
+            { c: 'Enameled_Glass', q: 2 },
+        ],
+    },
+    Seatruck_Docking_Module: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Lead', q: 3 },
+        ],
+    },
+    Seatruck_Fabricator_Module: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Lead', q: 3 },
+        ],
+    },
+    Seatruck_Sleeper_Module: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Fiber_Mesh', q: 2 },
+            { c: 'Lead', q: 3 },
+        ],
+    },
+    Seatruck_Storage_Module: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Lead', q: 3 },
+        ],
+    },
+    Seatruck_Teleportation_Module: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Titanium_Ingot', q: 1 },
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Aerogel', q: 2 },
+        ],
+    },
 };
