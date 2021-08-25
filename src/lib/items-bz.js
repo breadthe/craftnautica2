@@ -1016,6 +1016,13 @@ export default {
     },
 
     // ============= Recipes.Snowfox_Hoverpad
-    // Snowfox_Hoverpad
-    // Snowfox
+    Snowfox: {
+        t: 'Recipes.Snowfox_Hoverpad',
+        m: [
+            { c: 'Magnetite', q: 2 },
+            { c: 'Battery', q: 1 },
+            { c: 'Lubricant', q: 1 },
+            { c: 'Titanium', q: 1 },
+        ],
+    },
 };

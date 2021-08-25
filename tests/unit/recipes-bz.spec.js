@@ -235,4 +235,9 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Prawn_Suit_Torpedo_Arm')).toEqual([{ c: 'Titanium', q: 5 }, { c: 'Lithium', q: 1 }, { c: 'Gel_Sack', q: 1 }, { c: 'Ruby', q: 1 }]);
         expect(algo.listOfMaterials('Prawn_Suit_Grappling_Arm')).toEqual([{ c: 'Flowering_Spore', q: 2 }, { c: 'Ribbon_Plant', q: 1 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Titanium', q: 2 }, { c: 'Lithium', q: 1 }]);
     });
+
+    /* Recipes.Snowfox_Hoverpad */
+    test('it returns the correct list of base materials for Recipes.Snowfox_Hoverpad', () => {
+        expect(algo.listOfMaterials('Snowfox')).toEqual([{ c: 'Magnetite', q: 2 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }]);
+    });
 });
