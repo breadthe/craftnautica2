@@ -220,5 +220,19 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Seatruck_Sleeper_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Creepvine_Sample', q: 4 }, { c: 'Lead', q: 3 }]);
         expect(algo.listOfMaterials('Seatruck_Storage_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 2 }, { c: 'Lead', q: 3 }]);
         expect(algo.listOfMaterials('Seatruck_Teleportation_Module')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Gel_Sack', q: 2 }, { c: 'Ruby', q: 2 }]);
+        expect(algo.listOfMaterials('Prawn_Suit')).toEqual([{ c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 4 }, { c: 'Titanium', q: 10 }, { c: 'Lithium', q: 2 }, { c: 'Ribbon_Plant', q: 4 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Quartz', q: 2 }, { c: 'Diamond', q: 1 }, { c: 'Lead', q: 1 }]);
+    });
+
+    /* Recipes.Vehicle_Upgrade_Console */
+    test('it returns the correct list of base materials for Recipes.Vehicle_Upgrade_Console', () => {
+        expect(algo.listOfMaterials('Prawn_Suit_Depth_Module_MK1')).toEqual([{ c: 'Ruby', q: 4 }, { c: 'Spiral_Plant_Clipping', q: 1 }, { c: 'Quartz', q: 2 }, { c: 'Diamond', q: 1 }, { c: 'Lead', q: 1 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Depth_Module_MK2')).toEqual([{ c: 'Ruby', q: 4 }, { c: 'Spiral_Plant_Clipping', q: 1 }, { c: 'Quartz', q: 2 }, { c: 'Diamond', q: 1 }, { c: 'Lead', q: 1 }, { c: 'Kyanite', q: 1 }, { c: 'Nickel_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Drill_Arm')).toEqual([{ c: 'Titanium', q: 5 }, { c: 'Lithium', q: 1 }, { c: 'Diamond', q: 4 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Jump_Jet_Upgrade')).toEqual([{ c: 'Nickel_Ore', q: 2 }, { c: 'Crystalline_Sulfur', q: 3 }, { c: 'Titanium', q: 5 }, { c: 'Lithium', q: 1 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Propulsion_Cannon')).toEqual([{ c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 1 }, { c: 'Copper_Ore', q: 2 }, { c: 'Titanium', q: 5 }, { c: 'Lithium', q: 1 }, { c: 'Magnetite', q: 2 }]);
+        expect(algo.listOfMaterials('Storage_Module')).toEqual([{ c: 'Titanium', q: 3 }, { c: 'Lithium', q: 1 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Thermal_Reactor')).toEqual([{ c: 'Kyanite', q: 2 }, { c: 'Gold', q: 2 }, { c: 'Young_Cotton_Anemone', q: 6 }, { c: 'Salt_Deposit', q: 2 }, { c: 'Silver_Ore', q: 2 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Torpedo_Arm')).toEqual([{ c: 'Titanium', q: 5 }, { c: 'Lithium', q: 1 }, { c: 'Gel_Sack', q: 1 }, { c: 'Ruby', q: 1 }]);
+        expect(algo.listOfMaterials('Prawn_Suit_Grappling_Arm')).toEqual([{ c: 'Flowering_Spore', q: 2 }, { c: 'Ribbon_Plant', q: 1 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Titanium', q: 2 }, { c: 'Lithium', q: 1 }]);
     });
 });

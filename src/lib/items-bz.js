@@ -929,4 +929,93 @@ export default {
             { c: 'Aerogel', q: 2 },
         ],
     },
+    Prawn_Suit: {
+        t: 'Recipes.Mobile_Vehicle_Bay',
+        m: [
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Plasteel_Ingot', q: 1 },
+            { c: 'Power_Cell', q: 1 },
+            { c: 'Enameled_Glass', q: 1 },
+        ],
+    },
+
+    // ============= Recipes.Vehicle_Upgrade_Console
+    Prawn_Suit_Depth_Module_MK1: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Synthetic_Fibers', q: 1 },
+            { c: 'Enameled_Glass', q: 1 },
+            { c: 'Ruby', q: 3 },
+        ],
+    },
+    Prawn_Suit_Depth_Module_MK2: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Prawn_Suit_Depth_Module_MK1', q: 1 },
+            { c: 'Kyanite', q: 1 },
+            { c: 'Nickel_Ore', q: 2 },
+        ],
+    },
+    Prawn_Suit_Drill_Arm: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Titanium', q: 5 },
+            { c: 'Lithium', q: 1 },
+            { c: 'Diamond', q: 4 },
+        ],
+    },
+    Prawn_Suit_Jump_Jet_Upgrade: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Nickel_Ore', q: 2 },
+            { c: 'Crystalline_Sulfur', q: 3 },
+            { c: 'Titanium', q: 5 },
+            { c: 'Lithium', q: 1 },
+        ],
+    },
+    Prawn_Suit_Propulsion_Cannon: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Titanium', q: 5 },
+            { c: 'Lithium', q: 1 },
+            { c: 'Magnetite', q: 2 },
+        ],
+    },
+    Storage_Module: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Titanium', q: 3 },
+            { c: 'Lithium', q: 1 },
+        ],
+    },
+    Prawn_Suit_Thermal_Reactor: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Kyanite', q: 2 },
+            { c: 'Polyaniline', q: 2 },
+            { c: 'Wiring_Kit', q: 1 },
+        ],
+    },
+    Prawn_Suit_Torpedo_Arm: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Titanium', q: 5 },
+            { c: 'Lithium', q: 1 },
+            { c: 'Aerogel', q: 1 },
+        ],
+    },
+    Prawn_Suit_Grappling_Arm: {
+        t: 'Recipes.Vehicle_Upgrade_Console',
+        m: [
+            { c: 'Benzene', q: 1 },
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Titanium', q: 2 },
+            { c: 'Lithium', q: 1 },
+        ],
+    },
+
+    // ============= Recipes.Snowfox_Hoverpad
+    // Snowfox_Hoverpad
+    // Snowfox
 };
