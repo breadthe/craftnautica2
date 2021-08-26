@@ -333,7 +333,7 @@ export default {
             { c: 'Fiber_Mesh', q: 1 },
         ],
     },
-    Floting_Air_Pump: {
+    Floating_Air_Pump: {
         t: 'Recipes.Fabricator.Personal.Equipment',
         m: [
             { c: 'Titanium', q: 2 },
