@@ -29,8 +29,8 @@ export default {
     Ribbon_Plant: { t: 'Raw_Materials.Biological', m: null },
     Root_Globule: { t: 'Raw_Materials.Biological', m: null },
     "Preston's_Plant_Leaf": { t: 'Raw_Materials.Biological', m: null },
-    Snow_Stalker_Fur: { t: 'Snow_Stalker_Fur', m: null },
-    Spiral_Plant_Clipping: { t: 'Spiral_Plant_Clipping', m: null },
+    Snow_Stalker_Fur: { t: 'Raw_Materials.Biological', m: null },
+    Spiral_Plant_Clipping: { t: 'Raw_Materials.Biological', m: null },
     Table_Coral_Sample: { t: 'Raw_Materials.Biological', m: null },
     Young_Cotton_Anemone: { t: 'Raw_Materials.Biological', m: null },
 
@@ -384,7 +384,7 @@ export default {
         ],
     },
     'Standard_O₂_Tank': { // TODO: Figure out if non-ASCII subscript works for linking & stuff
-        t: 'Recipes.Fabricator.Sustenance.Personal.Equipment',
+        t: 'Recipes.Fabricator.Personal.Equipment',
         m: [
             { c: 'Titanium', q: 2 },
             { c: 'Fiber_Mesh', q: 1 },
