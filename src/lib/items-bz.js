@@ -1015,6 +1015,59 @@ export default {
         ],
     },
 
+    // ============= Recipes.Seatruck_Fabricator_Module
+    Seatruck_Afterburner_Upgrade: {
+        t: 'Recipes.Seatruck_Fabricator_Module',
+        m: [
+            { c: 'Wiring_Kit', q: 1 },
+            { c: 'Power_Cell', q: 1 },
+            { c: 'Lithium', q: 2 },
+            { c: 'Crystalline_Sulfur', q: 2 },
+        ],
+    },
+    Seatruck_Depth_Upgrade_MK1: {
+        t: 'Recipes.Seatruck_Fabricator_Module',
+        m: [
+            { c: 'Plasteel_Ingot', q: 1 },
+            { c: 'Enameled_Glass', q: 1 },
+        ],
+    },
+    Seatruck_Depth_Upgrade_MK2: {
+        t: 'Recipes.Seatruck_Fabricator_Module',
+        m: [
+            { c: 'Seatruck_Depth_Upgrade_MK1', q: 1 },
+            { c: 'Synthetic_Fibers', q: 1 },
+            { c: 'Enameled_Glass', q: 1 },
+            { c: 'Ruby', q: 2 },
+        ],
+    },
+    Seatruck_Depth_Upgrade_MK3: {
+        t: 'Recipes.Seatruck_Fabricator_Module',
+        m: [
+            { c: 'Seatruck_Depth_Upgrade_MK2', q: 1 },
+            { c: 'Nickel_Ore', q: 3 },
+            { c: 'Kyanite', q: 2 },
+            { c: 'Plasteel_Ingot', q: 1 },
+        ],
+    },
+    Seatruck_Horsepower_Upgrade: {
+        t: 'Recipes.Seatruck_Fabricator_Module',
+        m: [
+            { c: 'Advanced_Wiring_Kit', q: 1 },
+            { c: 'Lubricant', q: 1 },
+            { c: 'Lithium', q: 1 },
+        ],
+    },
+    Seatruck_Perimeter_Defense_Upgrade: {
+        t: 'Recipes.Seatruck_Fabricator_Module',
+        m: [
+            { c: 'Computer_Chip', q: 1 },
+            { c: 'Ruby', q: 2 },
+            { c: 'Power_Cell', q: 1 },
+            { c: 'Polyaniline', q: 1 },
+        ],
+    },
+
     // ============= Recipes.Snowfox_Hoverpad
     Snowfox: {
         t: 'Recipes.Snowfox_Hoverpad',

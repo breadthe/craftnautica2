@@ -236,6 +236,16 @@ describe('Test recipes', () => {
         expect(algo.listOfMaterials('Prawn_Suit_Grappling_Arm')).toEqual([{ c: 'Flowering_Spore', q: 2 }, { c: 'Ribbon_Plant', q: 1 }, { c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Titanium', q: 2 }, { c: 'Lithium', q: 1 }]);
     });
 
+    /* Recipes.Seatruck_Fabricator_Module */
+    test('it returns the correct list of base materials for Recipes.Seatruck_Fabricator_Module', () => {
+        expect(algo.listOfMaterials('Seatruck_Afterburner_Upgrade')).toEqual([{ c: 'Silver_Ore', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Ribbon_Plant', q: 4 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Lithium', q: 2 }, { c: 'Crystalline_Sulfur', q: 2 }]);
+        expect(algo.listOfMaterials('Seatruck_Depth_Upgrade_MK1')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Lithium', q: 2 }, { c: 'Quartz', q: 2 }, { c: 'Diamond', q: 1 }, { c: 'Lead', q: 1 }]);
+        expect(algo.listOfMaterials('Seatruck_Depth_Upgrade_MK2')).toEqual([{ c: 'Titanium', q: 10 }, { c: 'Lithium', q: 2 }, { c: 'Quartz', q: 4 }, { c: 'Diamond', q: 2 }, { c: 'Lead', q: 2 }, { c: 'Ruby', q: 3 }, { c: 'Spiral_Plant_Clipping', q: 1 }]);
+        expect(algo.listOfMaterials('Seatruck_Depth_Upgrade_MK3')).toEqual([{ c: 'Titanium', q: 20 }, { c: 'Lithium', q: 4 }, { c: 'Quartz', q: 4 }, { c: 'Diamond', q: 2 }, { c: 'Lead', q: 2 }, { c: 'Ruby', q: 3 }, { c: 'Spiral_Plant_Clipping', q: 1 }, { c: 'Nickel_Ore', q: 3 }, { c: 'Kyanite', q: 2 }]);
+        expect(algo.listOfMaterials('Seatruck_Horsepower_Upgrade')).toEqual([{ c: 'Silver_Ore', q: 2 }, { c: 'Gold', q: 3 }, { c: 'Table_Coral_Sample', q: 2 }, { c: 'Copper_Ore', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Lithium', q: 1 }]);
+        expect(algo.listOfMaterials('Seatruck_Perimeter_Defense_Upgrade')).toEqual([{ c: 'Table_Coral_Sample', q: 2 }, { c: 'Gold', q: 2 }, { c: 'Copper_Ore', q: 4 }, { c: 'Ruby', q: 2 }, { c: 'Ribbon_Plant', q: 4 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Young_Cotton_Anemone', q: 3 }, { c: 'Salt_Deposit', q: 1 }]);
+    });
+
     /* Recipes.Snowfox_Hoverpad */
     test('it returns the correct list of base materials for Recipes.Snowfox_Hoverpad', () => {
         expect(algo.listOfMaterials('Snowfox')).toEqual([{ c: 'Magnetite', q: 2 }, { c: 'Copper_Ore', q: 1 }, { c: 'Ribbon_Plant', q: 2 }, { c: 'Creepvine_Seed_Cluster', q: 1 }, { c: 'Titanium', q: 1 }]);
