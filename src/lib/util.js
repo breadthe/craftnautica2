@@ -2,7 +2,7 @@ const defaultInventories = ['Lifepod', 'Seamoth', 'Cyclops', 'Prawn'];
 
 const id = item => Object.keys(item)[0]; // {'Copper_Ore': 2} -> Copper_Ore
 
-const icon = item => `/img/items/${item}.png`;
+const icon = item => `/img/items/${item.replaceAll(`'`, '')}.png`;
 
 const pretty = n => n.split('_')
     .join(' ');
